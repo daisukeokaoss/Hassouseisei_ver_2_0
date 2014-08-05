@@ -27,6 +27,7 @@
 		C9CAB44819914D1B0004B6D6 /* 09-chat-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */; };
 		C9CAB44919914D1B0004B6D6 /* 15-tags.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB44519914D1B0004B6D6 /* 15-tags.png */; };
 		C9CAB44A19914D1B0004B6D6 /* 15-tags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB44619914D1B0004B6D6 /* 15-tags@2x.png */; };
+		C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-chat-2@2x.png"; sourceTree = "<group>"; };
 		C9CAB44519914D1B0004B6D6 /* 15-tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15-tags.png"; sourceTree = "<group>"; };
 		C9CAB44619914D1B0004B6D6 /* 15-tags@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15-tags@2x.png"; sourceTree = "<group>"; };
+		C9CAB44B1991521B0004B6D6 /* QBFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBFlatButton.h; sourceTree = "<group>"; };
+		C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBFlatButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				C9CAB42119914B730004B6D6 /* BrainStormingFirstViewController.m */,
 				C9CAB42319914B730004B6D6 /* BrainStormingSecondViewController.h */,
 				C9CAB42419914B730004B6D6 /* BrainStormingSecondViewController.m */,
+				C9CAB44B1991521B0004B6D6 /* QBFlatButton.h */,
+				C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */,
 				C9CAB44319914D1B0004B6D6 /* 09-chat-2.png */,
 				C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */,
 				C9CAB44519914D1B0004B6D6 /* 15-tags.png */,
@@ -276,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */,
+				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
