@@ -85,6 +85,8 @@
         //iPad Retina
     }else if(ScreenHeight == 480 && ScreenWidth == 320){
         //iPhone 3,iPhone 3S
+        //サポートされていません
+        
     }else if(ScreenHeight == 960 && ScreenWidth == 640){
         //iPhone 4,iPhone 4S
     }else if(ScreenHeight == 1136 && ScreenWidth == 640){
@@ -94,7 +96,125 @@
     }
 }
 
--(void)setUpViewDidLoad_iPhone5
+-(void)setUpViewDidLoad_iPadRetina
+{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 768, 975)];
+    self.contentSize = CGSizeMake(768, 975);
+    
+    //ここから作りかけ
+    
+    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 50, 400, 21)];
+    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,90,400, 21)];
+    self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,130, 400,21)];
+    self.FourthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,170,400,21)];
+    self.FifthWordLabel= [[UILabel alloc] initWithFrame:CGRectMake(30,210,400,21)];
+    self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,250,400,21)];
+    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 400, 21)];
+    
+    self.FirstWordLabel.text = @"";
+    self.SecondWordLabel.text = @"";
+    self.ThirdWordLabel.text = @"";
+    self.FourthWordLabel.text = @"";
+    self.FifthWordLabel.text = @"";
+    self.SixthWordLabel.text = @"";
+    self.SeventhWordLabel.text = @"";
+    [contentView addSubview:self.FirstWordLabel];
+    [contentView addSubview:self.SecondWordLabel];
+    [contentView addSubview:self.ThirdWordLabel];
+    [contentView addSubview:self.FourthWordLabel];
+    [contentView addSubview:self.FifthWordLabel];
+    [contentView addSubview:self.SixthWordLabel];
+    [contentView addSubview:self.SeventhWordLabel];
+    
+    /////////////////////////////////////////////////////////////////////////////
+    //以下、QBFlatButtonを設定する
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.75 alpha:1.0] forState:UIControlStateDisabled];
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.55 alpha:1.0] forState:UIControlStateDisabled];
+    
+    self.genereteButton = [QBFlatButton buttonWithType:UIButtonTypeCustom];
+    self.genereteButton.frame = CGRectMake(20, 312, 270, 90);
+    self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.cornerRadius = 6.0;
+    //self.genereteButton.margin = 7.0;
+    self.genereteButton.depth  = 6.0;
+    
+    [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
+                  forControlEvents:UIControlEventTouchDown];
+    
+    [contentView addSubview:self.genereteButton];
+    
+    
+    
+    //以上、QBFlatButtonを設定した
+    /////////////////////////////////////////////////////////////////////////////
+    
+    [self addSubview:contentView];
+    
+    
+    [self InitializeUserInterface];
+}
+
+-(void)setUpViewDidLoad_iPhone4_iPhone4S
+{
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 430, 480)];
+    self.contentSize = CGSizeMake(430, 568);
+    
+    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 50, 400, 21)];
+    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,90,400, 21)];
+    self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,130, 400,21)];
+    self.FourthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,170,400,21)];
+    self.FifthWordLabel= [[UILabel alloc] initWithFrame:CGRectMake(30,210,400,21)];
+    self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,250,400,21)];
+    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 400, 21)];
+    
+    self.FirstWordLabel.text = @"";
+    self.SecondWordLabel.text = @"";
+    self.ThirdWordLabel.text = @"";
+    self.FourthWordLabel.text = @"";
+    self.FifthWordLabel.text = @"";
+    self.SixthWordLabel.text = @"";
+    self.SeventhWordLabel.text = @"";
+    [contentView addSubview:self.FirstWordLabel];
+    [contentView addSubview:self.SecondWordLabel];
+    [contentView addSubview:self.ThirdWordLabel];
+    [contentView addSubview:self.FourthWordLabel];
+    [contentView addSubview:self.FifthWordLabel];
+    [contentView addSubview:self.SixthWordLabel];
+    [contentView addSubview:self.SeventhWordLabel];
+    
+    /////////////////////////////////////////////////////////////////////////////
+    //以下、QBFlatButtonを設定する
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.75 alpha:1.0] forState:UIControlStateDisabled];
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.55 alpha:1.0] forState:UIControlStateDisabled];
+    
+    self.genereteButton = [QBFlatButton buttonWithType:UIButtonTypeCustom];
+    self.genereteButton.frame = CGRectMake(20, 312, 270, 90);
+    self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.cornerRadius = 6.0;
+    //self.genereteButton.margin = 7.0;
+    self.genereteButton.depth  = 6.0;
+    
+    [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
+                  forControlEvents:UIControlEventTouchDown];
+    
+    [contentView addSubview:self.genereteButton];
+    
+    
+    
+    //以上、QBFlatButtonを設定した
+    /////////////////////////////////////////////////////////////////////////////
+    
+    [self addSubview:contentView];
+    
+    
+    [self InitializeUserInterface];
+}
+
+-(void)setUpViewDidLoad_iPhone5_iPhone5S
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 430, 568)];
@@ -125,15 +245,16 @@
     
     /////////////////////////////////////////////////////////////////////////////
     //以下、QBFlatButtonを設定する
-    [[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.75 alpha:1.0] forState:UIControlStateDisabled];
-    [[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.55 alpha:1.0] forState:UIControlStateDisabled];
+    
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.75 alpha:1.0] forState:UIControlStateDisabled];
+    //[[QBFlatButton appearance] setFaceColor:[UIColor colorWithWhite:0.55 alpha:1.0] forState:UIControlStateDisabled];
     
     self.genereteButton = [QBFlatButton buttonWithType:UIButtonTypeCustom];
     self.genereteButton.frame = CGRectMake(20, 400, 270, 90);
-    self.genereteButton.faceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
     self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
-    self.genereteButton.radius = 6.0;
-    self.genereteButton.margin = 7.0;
+    self.genereteButton.cornerRadius = 6.0;
+    //self.genereteButton.margin = 7.0;
     self.genereteButton.depth  = 6.0;
     
     [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
@@ -150,6 +271,44 @@
     
     
     [self InitializeUserInterface];
+}
+
+-(void)InitializeUserInterface
+{
+    self.FirstWordLabel.text = @"";
+    self.SecondWordLabel.text = @"";
+    self.ThirdWordLabel.text = @"";
+    self.FourthWordLabel.text = @"";
+    self.FifthWordLabel.text = @"";
+    self.SixthWordLabel.text = @"";
+    self.SeventhWordLabel.text = @"";
+    //self.EightsWordLabel.text = @"";
+    
+    
+    self.FirstWordLabel.userInteractionEnabled = YES;
+    self.SecondWordLabel.userInteractionEnabled = YES;
+    self.ThirdWordLabel.userInteractionEnabled = YES;
+    self.FourthWordLabel.userInteractionEnabled = YES;
+    self.FifthWordLabel.userInteractionEnabled = YES;
+    self.SixthWordLabel.userInteractionEnabled = YES;
+    self.SeventhWordLabel.userInteractionEnabled = YES;
+    // self.EightsWordLabel.userInteractionEnabled = YES;
+    self.genereteButton.userInteractionEnabled = YES;
+    self.FirstWordLabel.tag = 101;
+    self.SecondWordLabel.tag = 102;
+    self.ThirdWordLabel.tag  = 103;
+    self.FourthWordLabel.tag = 104;
+    self.FifthWordLabel.tag  = 105;
+    self.SixthWordLabel.tag  = 106;
+    self.SeventhWordLabel.tag = 107;
+    self.genereteButton.tag = 108;
+    self.tag  = 109;
+}
+
+-(void)generateButton_touchDown:(id)sender
+{
+   // [self pushGenerateButton];
+    
 }
 
 /*
