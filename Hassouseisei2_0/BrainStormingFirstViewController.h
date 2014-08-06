@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+//ユーザーインクルード
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
 @interface BrainStormingFirstViewController : UIViewController
 
 @end
