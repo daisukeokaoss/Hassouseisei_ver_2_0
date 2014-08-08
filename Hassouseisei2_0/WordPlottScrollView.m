@@ -10,6 +10,8 @@
 
 //ユーザーインポート
 #import "QBFlatButton.h"
+#import "BrainStormingAppDelegate.h"
+
 
 @interface WordPlottScrollView()
 @property (strong, nonatomic)  UILabel *FirstWordLabel;
@@ -96,21 +98,48 @@
     }
 }
 
--(void)setUpViewDidLoad_iPadRetina
+-(void)GenerateLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width
 {
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScrollView_width, ScrollView_height)];
+    self.contentSize = CGSizeMake(ScrollView_width, ScrollView_height);
+    
+    int Label_XCoodinateOffset = (int)(ScrollView_width*(30.0/430.0));  //=768(30/430)WordLabelの左端からの距離
+    int FirstLabel_YCoodinateOffset = (int)(ScrollView_height*(50.0/480.0)); //975(50/480)最初のWordLabelの上からの距離
+    int Label_Interval_YCoordinate = (int)(ScrollView_height*(40.0/480.0));
+    int Label_Height = 21;
+    int Label_Width = (int)(ScrollView_width*(400.0/480));
+    
+    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset, FirstLabel_YCoodinateOffset, Label_Width, Label_Height)];
+    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset, FirstLabel_YCoodinateOffset+Label_Interval_YCoordinate,
+                                                                     Label_Width, Label_Height)];
+}
+
+-(void)setUpViewDidLoad_iPadRetina_UIInterfaceOrientationPortorait
+{
+
+    
     self.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 768, 975)];
     self.contentSize = CGSizeMake(768, 975);
     
     //ここから作りかけ
     
-    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 50, 400, 21)];
+    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 50, 400, 21)];
+    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(50,90,400, 21)];
+    self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(50,130, 400,21)];
+    self.FourthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(50,170,400,21)];
+    self.FifthWordLabel= [[UILabel alloc] initWithFrame:CGRectMake(50,210,400,21)];
+    self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(40,250,400,21)];
+    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 400, 21)];
+    
+   /* self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 50, 400, 21)];
     self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,90,400, 21)];
     self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,130, 400,21)];
     self.FourthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,170,400,21)];
     self.FifthWordLabel= [[UILabel alloc] initWithFrame:CGRectMake(30,210,400,21)];
     self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30,250,400,21)];
-    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 400, 21)];
+    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 290, 400, 21)];*/
     
     self.FirstWordLabel.text = @"";
     self.SecondWordLabel.text = @"";
@@ -154,6 +183,35 @@
     
     
     [self InitializeUserInterface];
+    
+}
+
+-(void)setUpViewDidLoad_iPadRetina_UIInterfaceOrientationUpsideDown
+{
+    
+}
+
+-(void)setUpViewDidLoad_iPadRetina_LandscapeLeft
+{
+    
+}
+
+-(void)setUpViewDidLoad_iPadRetina_LandscapeRight
+{
+    
+}
+
+-(void)setUpViewDidLoad_iPadRetina
+{
+    if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationPortrait){
+        [self setUpViewDidLoad_iPadRetina_UIInterfaceOrientationPortorait];
+    }else if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown){
+        [self setUpViewDidLoad_iPadRetina_UIInterfaceOrientationUpsideDown];
+    }else if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationLandscapeLeft){
+        [self setUpViewDidLoad_iPadRetina_LandscapeLeft];
+    }else if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+        [self setUpViewDidLoad_iPadRetina_LandscapeRight];
+    }
 }
 
 -(void)setUpViewDidLoad_iPhone4_iPhone4S
