@@ -110,9 +110,24 @@
     int Label_Height = 21;
     int Label_Width = (int)(ScrollView_width*(400.0/480));
     
-    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset, FirstLabel_YCoodinateOffset, Label_Width, Label_Height)];
-    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset, FirstLabel_YCoodinateOffset+Label_Interval_YCoordinate,
+    self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                    FirstLabel_YCoodinateOffset, Label_Width, Label_Height)];
+    self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                     FirstLabel_YCoodinateOffset+Label_Interval_YCoordinate,
                                                                      Label_Width, Label_Height)];
+    self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                    FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate*2,
+                                                                    Label_Width , Label_Height)];
+    self.FourthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                     FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate*3,
+                                                                     Label_Width, Label_Height)];
+    self.FifthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                    FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate *4,
+                                                                    Label_Width, Label_Height)];
+    self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                    FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 5,
+                                                                    Label_Width, Label_Height)];
+    
 }
 
 -(void)setUpViewDidLoad_iPadRetina_UIInterfaceOrientationPortorait
