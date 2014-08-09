@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Brain Storming First View Controller - WordGenerate-->
+        <!--Brain Storming First View Controller i Pad - WordGenerate-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="BrainStormingFirstViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BrainStormingFirstViewController_iPad" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -20,10 +20,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items/>
                             </toolbar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0X-66-mTo">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -33,9 +29,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="WordGenerate" image="09-chat-2.png" id="acW-dT-cKf"/>
-                    <connections>
-                        <outlet property="myScrollView" destination="t0X-66-mTo" id="D4R-Xw-uJf"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

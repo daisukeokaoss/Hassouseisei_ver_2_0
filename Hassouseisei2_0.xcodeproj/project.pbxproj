@@ -29,6 +29,7 @@
 		C9CAB44A19914D1B0004B6D6 /* 15-tags@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB44619914D1B0004B6D6 /* 15-tags@2x.png */; };
 		C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */; };
 		C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */; };
+		C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBFlatButton.m; sourceTree = "<group>"; };
 		C9CAB44E1992213A0004B6D6 /* WordPlottScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPlottScrollView.h; sourceTree = "<group>"; };
 		C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPlottScrollView.m; sourceTree = "<group>"; };
+		C9EEA0AD19966BBD00389853 /* BrainStormingFirstViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainStormingFirstViewController_iPad.h; sourceTree = "<group>"; };
+		C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainStormingFirstViewController_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				C9CAB41D19914B730004B6D6 /* Main_iPad.storyboard */,
 				C9CAB44E1992213A0004B6D6 /* WordPlottScrollView.h */,
 				C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */,
+				C9EEA0AD19966BBD00389853 /* BrainStormingFirstViewController_iPad.h */,
+				C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */,
 				C9CAB42019914B730004B6D6 /* BrainStormingFirstViewController.h */,
 				C9CAB42119914B730004B6D6 /* BrainStormingFirstViewController.m */,
 				C9CAB42319914B730004B6D6 /* BrainStormingSecondViewController.h */,
@@ -287,6 +292,7 @@
 			files = (
 				C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */,
 				C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */,
+				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,

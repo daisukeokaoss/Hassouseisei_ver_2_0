@@ -9,7 +9,7 @@
 #import "BrainStormingFirstViewController.h"
 
 @interface BrainStormingFirstViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
 
 @end
 
@@ -27,22 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    if(toInterfaceOrientation == UIInterfaceOrientationPortrait){
-        NSLog(@"縦(ホームボタン下)");
-        self.myScrollView.frame.size.height;
-    }
-    else if(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown){
-        NSLog(@"縦(ホームボタン上)");
-    }
-    else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft){
-        NSLog(@"縦(ホームボタン右)");
-    }
-    else if(toInterfaceOrientation == UIInterfaceOrientationLandscapeRight){
-        NSLog(@"縦(ホームボタン左)");
-    }
-}
+
 
 
 
