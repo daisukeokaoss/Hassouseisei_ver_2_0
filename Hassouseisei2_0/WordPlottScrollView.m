@@ -28,6 +28,8 @@
 
 @property (strong,nonatomic) QBFlatButton *genereteButton;
 
+-(void)SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width;
+
 @end
 
 
@@ -75,30 +77,9 @@
 
 
 
--(void)SetUpUserInterface
-//UILabelを単語をアウトプットするのに使用する時にViewDidLoadで呼び出されるルーチン
-{
-    int ScreenHeight = [[UIScreen mainScreen] bounds].size.height;
-    int ScreenWidth  = [[UIScreen mainScreen] bounds].size.width;
-    if(ScreenHeight == 1024&&ScreenWidth == 768){
-        //iPad mini,iPad2 ,iPadのサイズ
-        
-    }else if(ScreenHeight == 2048&&ScreenWidth == 1536){
-        //iPad Retina
-    }else if(ScreenHeight == 480 && ScreenWidth == 320){
-        //iPhone 3,iPhone 3S
-        //サポートされていません
-        
-    }else if(ScreenHeight == 960 && ScreenWidth == 640){
-        //iPhone 4,iPhone 4S
-    }else if(ScreenHeight == 1136 && ScreenWidth == 640){
-        //iPhone 5,iPhone 5S
-    }else{
-        //それ以外の機種
-    }
-}
 
--(void)GenerateLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width
+
+-(void)SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width
 {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScrollView_width, ScrollView_height)];
@@ -127,8 +108,58 @@
     self.SixthWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
                                                                     FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 5,
                                                                     Label_Width, Label_Height)];
+    self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
+                                                                    FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 6,
+                                                                      Label_Width, Label_Height)];
     
+    self.FirstWordLabel.text = @"";
+    self.SecondWordLabel.text = @"";
+    self.ThirdWordLabel.text = @"";
+    self.FourthWordLabel.text = @"";
+    self.FifthWordLabel.text = @"";
+    self.SixthWordLabel.text = @"";
+    self.SeventhWordLabel.text = @"";
+    [contentView addSubview:self.FirstWordLabel];
+    [contentView addSubview:self.SecondWordLabel];
+    [contentView addSubview:self.ThirdWordLabel];
+    [contentView addSubview:self.FourthWordLabel];
+    [contentView addSubview:self.FifthWordLabel];
+    [contentView addSubview:self.SixthWordLabel];
+    [contentView addSubview:self.SeventhWordLabel];
+    
+    self.genereteButton = [QBFlatButton buttonWithType:UIButtonTypeCustom];
+    
+    
+    int QBFlatButton_XCoordinateOffset = Label_XCoodinateOffset;
+    int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/975.0));
+    int QBFlatButton_Width             = ScrollView_width - Label_XCoodinateOffset*2;
+    int QBFlatButton_Height            = (int)(ScrollView_height *(90.0/975));
+    
+    self.genereteButton.frame = CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
+                                           QBFlatButton_Width , QBFlatButton_Height);
+    self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
+    self.genereteButton.cornerRadius = 6.0;
+    //self.genereteButton.margin = 7.0;
+    self.genereteButton.depth  = 6.0;
+    
+    [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
+                  forControlEvents:UIControlEventTouchDown];
+    
+    [contentView addSubview:self.genereteButton];
+    
+    
+    
+    //以上、QBFlatButtonを設定した
+    /////////////////////////////////////////////////////////////////////////////
+    
+    [self addSubview:contentView];
+    
+    
+    [self InitializeUserInterface];
 }
+
+
 
 -(void)setUpViewDidLoad_iPadRetina_UIInterfaceOrientationPortorait
 {
@@ -382,6 +413,54 @@
 {
    // [self pushGenerateButton];
     
+}
+
+-(void)SetUpUserInterface
+//UILabelを単語をアウトプットするのに使用する時にViewDidLoadで呼び出されるルーチン
+{
+    int ScreenHeight = [[UIScreen mainScreen] bounds].size.height;
+    int ScreenWidth  = [[UIScreen mainScreen] bounds].size.width;
+    if(ScreenHeight == 1024&&ScreenWidth == 768){
+        //iPad mini,iPad2 ,iPadのサイズ
+        [self SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:1024 Width:768];
+        
+        
+    }else if(ScreenHeight == 2048&&ScreenWidth == 1536){
+        //iPad Retina
+        [self SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:2048 Width:1536];
+    }else if(ScreenHeight == 480 && ScreenWidth == 320){
+        //iPhone 3,iPhone 3S
+        //サポートされていません
+        UIAlertView *alert =
+        [[UIAlertView alloc]
+         initWithTitle:@"終了します"
+         message:@"This Device is not supported"
+         delegate:nil
+         cancelButtonTitle:nil
+         otherButtonTitles:@"OK", nil
+         ];
+        
+        [alert show];
+        
+    }else if(ScreenHeight == 960 && ScreenWidth == 640){
+        //iPhone 4,iPhone 4S
+        [self setUpViewDidLoad_iPhone4_iPhone4S];
+    }else if(ScreenHeight == 1136 && ScreenWidth == 640){
+        //iPhone 5,iPhone 5S
+        [self setUpViewDidLoad_iPhone5_iPhone5S];
+    }else{
+        //それ以外の機種
+        UIAlertView *alert =
+        [[UIAlertView alloc]
+         initWithTitle:@"終了します"
+         message:@"This Device is not supported"
+         delegate:nil
+         cancelButtonTitle:nil
+         otherButtonTitles:@"OK", nil
+         ];
+        
+        [alert show];
+    }
 }
 
 /*

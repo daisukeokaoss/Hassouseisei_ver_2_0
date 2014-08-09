@@ -12,6 +12,6 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-@interface BrainStormingFirstViewController : UIViewController
+@interface BrainStormingFirstViewController : UIViewController 
 
 @end
