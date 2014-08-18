@@ -73,7 +73,7 @@
 {
     int ViewHeight = self.view.bounds.size.height;
     int ViewWidth  = self.view.bounds.size.width;
-    int ClientHeight = ViewHeight-30;
+    int ClientHeight = ViewHeight;
     int ClientWidth  = ViewWidth;
     [self.WordPlotScrollView setFrame:CGRectMake(0, 0, ClientWidth, ClientHeight)];
     

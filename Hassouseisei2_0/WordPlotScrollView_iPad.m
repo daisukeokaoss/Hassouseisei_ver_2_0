@@ -124,6 +124,7 @@
     self.genereteButton.height = 7.0;
     
     self.genereteButton.depth  = 6.0;
+    [self.genereteButton setTitle:@"Push" forState:UIControlStateNormal];
     
     
     [self addSubview:self.genereteButton];

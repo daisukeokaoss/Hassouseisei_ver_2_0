@@ -143,7 +143,7 @@
     int QBFlatButton_XCoordinateOffset = Label_XCoodinateOffset;
     int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/430.0));
     int QBFlatButton_Width             = ScrollView_width - Label_XCoodinateOffset*2;
-    int QBFlatButton_Height            = (int)(ScrollView_height *(90.0/430));
+    int QBFlatButton_Height            = (int)(ScrollView_height *(60.0/430));
     
     self.genereteButton = [[QBFlatButton alloc] initWithFrame:CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
                                                                          QBFlatButton_Width , QBFlatButton_Height)];
@@ -155,6 +155,8 @@
     self.genereteButton.height = 7.0;
     
     self.genereteButton.depth  = 6.0;
+    [self.genereteButton setTitle:@"Push" forState:UIControlStateNormal];
+    
     
     
     [self addSubview:self.genereteButton];
