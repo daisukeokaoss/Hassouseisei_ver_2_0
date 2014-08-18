@@ -77,13 +77,13 @@
 
 
 
-
-
 -(void)SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width
 {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScrollView_width, ScrollView_height)];
-    self.contentSize = CGSizeMake(ScrollView_width, ScrollView_height);
+    //[self DeleteUserInterface];
+    
+    //  [self setContentSize:CGSizeMake(ScrollView_width, ScrollView_height)];
+    //[self setBounds:CGRectMake(0, 0, ScrollView_width, ScrollView_height)];
+    // [self setFrame:CGRectMake(0, 0, ScrollView_width, ScrollView_height)];
     
     int Label_XCoodinateOffset = (int)(ScrollView_width*(30.0/430.0));  //=768(30/430)WordLabelの左端からの距離
     int FirstLabel_YCoodinateOffset = (int)(ScrollView_height*(50.0/480.0)); //975(50/480)最初のWordLabelの上からの距離
@@ -93,9 +93,11 @@
     
     self.FirstWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
                                                                     FirstLabel_YCoodinateOffset, Label_Width, Label_Height)];
+    
     self.SecondWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
                                                                      FirstLabel_YCoodinateOffset+Label_Interval_YCoordinate,
                                                                      Label_Width, Label_Height)];
+    
     self.ThirdWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
                                                                     FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate*2,
                                                                     Label_Width , Label_Height)];
@@ -109,54 +111,70 @@
                                                                     FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 5,
                                                                     Label_Width, Label_Height)];
     self.SeventhWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(Label_XCoodinateOffset,
-                                                                    FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 6,
+                                                                      FirstLabel_YCoodinateOffset + Label_Interval_YCoordinate * 6,
                                                                       Label_Width, Label_Height)];
     
-    self.FirstWordLabel.text = @"";
-    self.SecondWordLabel.text = @"";
-    self.ThirdWordLabel.text = @"";
-    self.FourthWordLabel.text = @"";
-    self.FifthWordLabel.text = @"";
-    self.SixthWordLabel.text = @"";
-    self.SeventhWordLabel.text = @"";
-    [contentView addSubview:self.FirstWordLabel];
-    [contentView addSubview:self.SecondWordLabel];
-    [contentView addSubview:self.ThirdWordLabel];
-    [contentView addSubview:self.FourthWordLabel];
-    [contentView addSubview:self.FifthWordLabel];
-    [contentView addSubview:self.SixthWordLabel];
-    [contentView addSubview:self.SeventhWordLabel];
     
-    self.genereteButton = [QBFlatButton buttonWithType:UIButtonTypeCustom];
+    
+    
+    [self.FirstWordLabel setText:@""];
+    [self.SecondWordLabel setText:@""];
+    [self.ThirdWordLabel setText:@""];
+    [self.FourthWordLabel setText:@""];
+    [self.FifthWordLabel setText:@""];
+    [self.SixthWordLabel setText:@""];
+    [self.SeventhWordLabel setText:@""];
+    
+    
+    [self TestInput];
+    
+    
+    
+    [self addSubview:self.FirstWordLabel];
+    [self addSubview:self.SecondWordLabel];
+    [self addSubview:self.ThirdWordLabel];
+    [self addSubview:self.FourthWordLabel];
+    [self addSubview:self.FifthWordLabel];
+    [self addSubview:self.SixthWordLabel];
+    [self addSubview:self.SeventhWordLabel];
+    
     
     
     int QBFlatButton_XCoordinateOffset = Label_XCoodinateOffset;
-    int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/975.0));
+    int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/430.0));
     int QBFlatButton_Width             = ScrollView_width - Label_XCoodinateOffset*2;
-    int QBFlatButton_Height            = (int)(ScrollView_height *(90.0/975));
+    int QBFlatButton_Height            = (int)(ScrollView_height *(90.0/430));
     
-    self.genereteButton.frame = CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
-                                           QBFlatButton_Width , QBFlatButton_Height);
+    self.genereteButton = [[QBFlatButton alloc] initWithFrame:CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
+                                                                         QBFlatButton_Width , QBFlatButton_Height)];
+    
+    
     self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
     self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
     self.genereteButton.cornerRadius = 6.0;
-    //self.genereteButton.margin = 7.0;
+    self.genereteButton.height = 7.0;
+    
     self.genereteButton.depth  = 6.0;
     
-    [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
-                  forControlEvents:UIControlEventTouchDown];
     
-    [contentView addSubview:self.genereteButton];
+    [self addSubview:self.genereteButton];
     
-    
-    
-    //以上、QBFlatButtonを設定した
-    /////////////////////////////////////////////////////////////////////////////
-    
-    [self addSubview:contentView];
+    // [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
+    //         forControlEvents:UIControlEventTouchDown];
     
     
-    [self InitializeUserInterface];
+}
+
+-(void)TestInput
+{
+    [self.FirstWordLabel setText:@"aaa"];
+    [self.SecondWordLabel setText:@"aaa"];
+    [self.ThirdWordLabel setText:@"aaa"];
+    [self.FourthWordLabel setText:@"aaa"];
+    [self.FifthWordLabel setText:@"aaa"];
+    [self.SixthWordLabel setText:@"aaa"];
+    [self.SeventhWordLabel setText:@"aaa"];
+    
 }
 
 
