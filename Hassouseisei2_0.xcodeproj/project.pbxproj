@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */; };
 		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
 		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
 		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPlotScrollView_iPad.h; sourceTree = "<group>"; };
+		C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPlotScrollView_iPad.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 				C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */,
 				C9CAB41A19914B730004B6D6 /* Main_iPhone.storyboard */,
 				C9CAB41D19914B730004B6D6 /* Main_iPad.storyboard */,
+				C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */,
+				C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */,
 				C9CAB44E1992213A0004B6D6 /* WordPlottScrollView.h */,
 				C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */,
 				C9EEA0AD19966BBD00389853 /* BrainStormingFirstViewController_iPad.h */,
@@ -296,6 +301,7 @@
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,
+				C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
