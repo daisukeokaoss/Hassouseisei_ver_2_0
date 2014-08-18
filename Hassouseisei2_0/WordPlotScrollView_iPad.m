@@ -121,7 +121,8 @@
     self.genereteButton.surfaceColor = [UIColor colorWithRed:243.0/255.0 green:152.0/255.0 blue:0 alpha:1.0];
     self.genereteButton.sideColor = [UIColor colorWithRed:170.0/255.0 green:105.0/255.0 blue:0 alpha:1.0];
     self.genereteButton.cornerRadius = 6.0;
-    //self.genereteButton.margin = 7.0;
+    self.genereteButton.height = 7.0;
+    
     self.genereteButton.depth  = 6.0;
     
     

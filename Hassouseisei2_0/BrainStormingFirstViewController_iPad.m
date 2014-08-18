@@ -73,7 +73,6 @@
 {
     int ViewHeight = self.view.bounds.size.height;
     int ViewWidth  = self.view.bounds.size.width;
-   // int TabBarItemHeight = [[[self tabBarController] rotatingHeaderView] frame].size.height;
     int ClientHeight = ViewHeight-30;
     int ClientWidth  = ViewWidth;
     [self.WordPlotScrollView setFrame:CGRectMake(0, 0, ClientWidth, ClientHeight)];
