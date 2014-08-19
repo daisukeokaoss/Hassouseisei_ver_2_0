@@ -10,4 +10,6 @@
 
 @interface WordSelectionPlotScrollView_iPhone : UIScrollView
 
+-(void)BuildUserInterfaceWithCGSize:(CGSize)size;
+
 @end

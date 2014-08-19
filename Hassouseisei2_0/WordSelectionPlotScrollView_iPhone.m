@@ -79,6 +79,33 @@
     [self.ModernSocialWordLabel setText:@"現代社会用語"];
     [self.ModernSocialWordLabel sizeToFit];
     
+    self.OpticalWordLabel      = [[UILabel alloc] initWithFrame:CGRectMake(36, 222, 68, 21)];
+    self.OpticalWordSwitch     = [[UISwitch alloc] initWithFrame:CGRectMake(237,222,51,31)];
+    [self.OpticalWordLabel setText:@"光学用語"];
+    [self.OpticalWordLabel sizeToFit];
+    
+    self.ElementaryWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(36, 261, 68, 21)];
+    self.ElementaryWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(237,261,51,31)];
+    [self.ElementaryWordLabel setText:@"一般用語"];
+    [self.ElementaryWordLabel sizeToFit];
+    
+    
+    
+    [self addSubview:self.wordCountSegmentedControl];
+    [self addSubview:self.BiologicalWordLabel];
+    [self addSubview:self.BiologicalWordSwitch];
+    [self addSubview:self.ChemicalWordLabel];
+    [self addSubview:self.ChemicalWordSwitch];
+    [self addSubview:self.ITWordLabel];
+    [self addSubview:self.ITWordSwitch];
+    [self addSubview:self.ModernSocialWordLabel];
+    [self addSubview:self.ModernSocialWordSwitch];
+    [self addSubview:self.OpticalWordLabel];
+    [self addSubview:self.OpticalWordSwitch];
+    [self addSubview:self.ElementaryWordLabel];
+    [self addSubview:self.ElementaryWordSwitch];
+    
+    
     
     //ここ、作りかけ
     
