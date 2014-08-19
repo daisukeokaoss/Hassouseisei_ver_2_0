@@ -11,9 +11,11 @@
 
 @interface WordSelectionPlotScrollView_iPhone()
 
+@property (nonatomic,strong) UISegmentedControl *wordCountSegmentedControl;
 @property (nonatomic,strong) UISwitch *BiologicalWordSwitch;
 @property (nonatomic,strong) UILabel  *BiologicalWordLabel;
 @property (nonatomic,strong) UISwitch *ChemicalWordSwitch;
+@property (nonatomic,strong) UILabel  *ChemicalWordLabel;
 @end
 
 @implementation WordSelectionPlotScrollView_iPhone
@@ -31,9 +33,15 @@
 {
     [self setContentSize:size];
     
+    self.wordCountSegmentedControl = [[UISegmentedControl alloc] initWithFrame:CGRectMake(30,20,250, 29)];
+    
     self.BiologicalWordSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(30, 30,51 , 31)];
     self.BiologicalWordLabel  = [[UILabel alloc] initWithFrame:CGRectMake(90,30, 68, 21)];
-    [self.BiologicalWordLabel setText:@"化学用語"];
+    [self.BiologicalWordLabel setText:@"生物用語"];
+    
+    self.ChemicalWordSwitch   = [[UISwitch alloc] initWithFrame:CGRectMake(30,105, 51, 31)];
+    self.ChemicalWordLabel    = [[UISwitch alloc] initWithFrame:CGRectMake(90,105,68, 21)];
+    [self.ChemicalWordLabel setText:@"化学用語"];
     //ここ、作りかけ
     
     
