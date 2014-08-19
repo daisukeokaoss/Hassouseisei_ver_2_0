@@ -11,6 +11,11 @@
 		C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E119A275DE002B9B68 /* BiologicalWordStore.m */; };
 		C97735E519A275FD002B9B68 /* ChemicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E419A275FD002B9B68 /* ChemicalWordStore.m */; };
 		C97735E919A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E819A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m */; };
+		C97735EF19A3A1D8002B9B68 /* ElementaryWord1.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735EE19A3A1D8002B9B68 /* ElementaryWord1.m */; };
+		C97735F219A3A206002B9B68 /* ITWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735F119A3A206002B9B68 /* ITWordStore.m */; };
+		C97735F519A3A21C002B9B68 /* ModeanSocialWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735F419A3A21C002B9B68 /* ModeanSocialWord.m */; };
+		C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735F719A3A230002B9B68 /* OpticalWordStore.m */; };
+		C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */; };
 		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
 		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
 		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
@@ -55,6 +60,16 @@
 		C97735E419A275FD002B9B68 /* ChemicalWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChemicalWordStore.m; sourceTree = "<group>"; };
 		C97735E719A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSelectionPlotScrollView_iPhone.h; sourceTree = "<group>"; };
 		C97735E819A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotScrollView_iPhone.m; sourceTree = "<group>"; };
+		C97735ED19A3A1D8002B9B68 /* ElementaryWord1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElementaryWord1.h; sourceTree = "<group>"; };
+		C97735EE19A3A1D8002B9B68 /* ElementaryWord1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElementaryWord1.m; sourceTree = "<group>"; };
+		C97735F019A3A206002B9B68 /* ITWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITWordStore.h; sourceTree = "<group>"; };
+		C97735F119A3A206002B9B68 /* ITWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITWordStore.m; sourceTree = "<group>"; };
+		C97735F319A3A21C002B9B68 /* ModeanSocialWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeanSocialWord.h; sourceTree = "<group>"; };
+		C97735F419A3A21C002B9B68 /* ModeanSocialWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeanSocialWord.m; sourceTree = "<group>"; };
+		C97735F619A3A230002B9B68 /* OpticalWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpticalWordStore.h; sourceTree = "<group>"; };
+		C97735F719A3A230002B9B68 /* OpticalWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpticalWordStore.m; sourceTree = "<group>"; };
+		C97735F919A3A240002B9B68 /* PhysicalWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalWordStore.h; sourceTree = "<group>"; };
+		C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalWordStore.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +135,16 @@
 				C97735E119A275DE002B9B68 /* BiologicalWordStore.m */,
 				C97735E319A275FD002B9B68 /* ChemicalWordStore.h */,
 				C97735E419A275FD002B9B68 /* ChemicalWordStore.m */,
+				C97735ED19A3A1D8002B9B68 /* ElementaryWord1.h */,
+				C97735EE19A3A1D8002B9B68 /* ElementaryWord1.m */,
+				C97735F019A3A206002B9B68 /* ITWordStore.h */,
+				C97735F119A3A206002B9B68 /* ITWordStore.m */,
+				C97735F319A3A21C002B9B68 /* ModeanSocialWord.h */,
+				C97735F419A3A21C002B9B68 /* ModeanSocialWord.m */,
+				C97735F619A3A230002B9B68 /* OpticalWordStore.h */,
+				C97735F719A3A230002B9B68 /* OpticalWordStore.m */,
+				C97735F919A3A240002B9B68 /* PhysicalWordStore.h */,
+				C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */,
 			);
 			name = Japanese;
 			sourceTree = "<group>";
@@ -318,9 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97735F219A3A206002B9B68 /* ITWordStore.m in Sources */,
 				C97735E919A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m in Sources */,
 				C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */,
 				C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */,
+				C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */,
+				C97735EF19A3A1D8002B9B68 /* ElementaryWord1.m in Sources */,
+				C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */,
 				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
@@ -328,6 +357,7 @@
 				C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */,
 				C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
+				C97735F519A3A21C002B9B68 /* ModeanSocialWord.m in Sources */,
 				C97735E519A275FD002B9B68 /* ChemicalWordStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
