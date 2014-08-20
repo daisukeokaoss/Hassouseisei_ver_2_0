@@ -8,6 +8,12 @@
 
 #import "WordSelectionPlotScrollView_iPad.h"
 
+
+#import "GlobalSetting.h"
+#import "BrainStormingAppDelegate.h"
+//
+
+
 @interface WordSelectionPlotScrollView_iPad()
 
 @property (nonatomic,strong) UISegmentedControl *wordCountSegmentedControl;
@@ -27,8 +33,12 @@
 @property (nonatomic,strong) UISwitch *OpticalWordSwitch;
 @property (nonatomic,strong) UILabel *OpticalWordLabel;
 
+@property (nonatomic,strong) UISwitch *physicalWordSwitch;
+@property (nonatomic,strong) UILabel *PhysicalWordLabel;
+
 @property (nonatomic,strong) UISwitch *ElementaryWordSwitch;
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
+
 
 @end
 
@@ -53,6 +63,39 @@
     // Drawing code
 }
 */
+
+
+-(void)saveUserDefaultFromUI
+{
+    
+}
+
+-(void)storeUI_FromUserDefault
+{
+    
+}
+
+-(void)dataStructureFromUI
+{
+    BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    GlobalSetting *setting = appdelegate.globalSetting;
+    setting.BiologicalWordGenerate = self.BiologicalWordSwitch.on;
+    setting.ChemicalWordGenerate = self.ChemicalWordSwitch.on;
+    setting.ITWordGenerate = self.ITWordSwitch.on;
+    setting.ModernSocialWordGenerate = self.ModernSocialWordSwitch.on;
+    setting.OpticalWordGenerate   = self.OpticalWordSwitch.on;
+    setting.PhysicalWordGenerate  = self.physicalWordSwitch.on;
+    setting.ElementaryWordGenerate = self.ElementaryWordSwitch.on;
+    
+    NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
+    
+    
+    NSString *selectedItem =  items[[self.wordCountSegmentedControl selectedSegmentIndex]];
+    setting.NumberOfGenerateWord=selectedItem.intValue;
+    
+}
+
+
 
 
 -(void)BuildUserInterfaceWithCGSize:(CGSize)size
@@ -101,10 +144,17 @@
     [self.OpticalWordLabel setText:@"光学用語"];
     [self.OpticalWordLabel sizeToFit];
     
-    self.ElementaryWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36,Y_Offset+261, 68, 21)];
-    self.ElementaryWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(X_Offset+237,Y_Offset+261,51,31)];
-    [self.ElementaryWordLabel setText:@"一般用語"];
+    self.PhysicalWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36,Y_Offset+261, 68, 21)];
+    self.physicalWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(X_Offset+237,Y_Offset+261,51,31)];
+    [self.PhysicalWordLabel setText:@"物理学用語"];
+    [self.PhysicalWordLabel sizeToFit];
+    
+    self.ElementaryWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36,Y_Offset+300, 68, 21)];
+    self.ElementaryWordSwitch= [[UISwitch alloc] initWithFrame:CGRectMake(X_Offset+237,Y_Offset+300, 51, 31)];
+    [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
+    
+    
     
     
     
@@ -121,6 +171,8 @@
     [self addSubview:self.OpticalWordSwitch];
     [self addSubview:self.ElementaryWordLabel];
     [self addSubview:self.ElementaryWordSwitch];
+    [self addSubview:self.PhysicalWordLabel];
+    [self addSubview:self.physicalWordSwitch];
     
 }
 

@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+//以下、ユーザーインクルード
+#import "GlobalSetting.h"
+
 @interface BrainStormingAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+
+@property (strong,nonatomic) GlobalSetting *globalSetting;
 
 @end

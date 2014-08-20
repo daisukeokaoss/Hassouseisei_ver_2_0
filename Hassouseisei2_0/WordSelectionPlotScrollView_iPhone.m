@@ -28,6 +28,9 @@
 @property (nonatomic,strong) UISwitch *OpticalWordSwitch;
 @property (nonatomic,strong) UILabel *OpticalWordLabel;
 
+@property (nonatomic,strong) UISwitch *physicalWordSwitch;
+@property (nonatomic,strong) UILabel *PhysicalWordLabel;
+
 @property (nonatomic,strong) UISwitch *ElementaryWordSwitch;
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
 
@@ -85,9 +88,14 @@
     [self.OpticalWordLabel setText:@"光学用語"];
     [self.OpticalWordLabel sizeToFit];
     
-    self.ElementaryWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(36, 261, 68, 21)];
-    self.ElementaryWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(237,261,51,31)];
-    [self.ElementaryWordLabel setText:@"一般用語"];
+    self.PhysicalWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(36, 261, 68, 21)];
+    self.physicalWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(237,261,51,31)];
+    [self.PhysicalWordLabel setText:@"一般用語"];
+    [self.PhysicalWordLabel sizeToFit];
+    
+    self.ElementaryWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(36,300, 68, 21)];
+    self.ElementaryWordSwitch= [[UISwitch alloc] initWithFrame:CGRectMake(237,300, 51, 31)];
+    [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
     
     
@@ -105,6 +113,8 @@
     [self addSubview:self.OpticalWordSwitch];
     [self addSubview:self.ElementaryWordLabel];
     [self addSubview:self.ElementaryWordSwitch];
+    [self addSubview:self.PhysicalWordLabel];
+    [self addSubview:self.physicalWordSwitch];
     
     
     

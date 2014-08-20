@@ -18,6 +18,7 @@
 		C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */; };
 		C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */; };
 		C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */; };
+		C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360319A4D155002B9B68 /* GlobalSetting.m */; };
 		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
 		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
 		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
@@ -76,6 +77,8 @@
 		C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotScrollView_iPad.m; sourceTree = "<group>"; };
 		C97735FF19A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSelectionPlotViewController_iPad.h; sourceTree = "<group>"; };
 		C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotViewController_iPad.m; sourceTree = "<group>"; };
+		C977360219A4D154002B9B68 /* GlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSetting.h; sourceTree = "<group>"; };
+		C977360319A4D155002B9B68 /* GlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSetting.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -210,6 +213,8 @@
 				C9CAB42419914B730004B6D6 /* BrainStormingSecondViewController.m */,
 				C9CAB44B1991521B0004B6D6 /* QBFlatButton.h */,
 				C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */,
+				C977360219A4D154002B9B68 /* GlobalSetting.h */,
+				C977360319A4D155002B9B68 /* GlobalSetting.m */,
 				C97735E619A27609002B9B68 /* Japanese */,
 				C9CAB44319914D1B0004B6D6 /* 09-chat-2.png */,
 				C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */,
@@ -368,6 +373,7 @@
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,
 				C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */,
 				C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */,
+				C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
 				C97735F519A3A21C002B9B68 /* ModeanSocialWord.m in Sources */,
 				C97735E519A275FD002B9B68 /* ChemicalWordStore.m in Sources */,
