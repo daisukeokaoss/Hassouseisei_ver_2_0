@@ -32,30 +32,31 @@
             </objects>
             <point key="canvasLocation" x="3021" y="150"/>
         </scene>
-        <!--Brain Storming Second View Controller - WordStore-->
+        <!--Word Selection Plot View Controller i Pad - WordStore-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="BrainStormingSecondViewController" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="WordSelectionPlotViewController_iPad" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6xF-o4-lXA" customClass="WordSelectionPlotScrollView_iPad">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ej5-n5-O85">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items>
                                     <navigationItem id="WaP-O7-m87"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Yzr-5p-mCP" customClass="QBFlatButton">
-                                <rect key="frame" x="34" y="744" width="714" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="WordStore" image="15-tags.png" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="myScrollView" destination="6xF-o4-lXA" id="hHX-IN-Jh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

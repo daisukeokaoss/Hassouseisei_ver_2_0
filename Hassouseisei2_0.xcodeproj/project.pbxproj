@@ -16,6 +16,8 @@
 		C97735F519A3A21C002B9B68 /* ModeanSocialWord.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735F419A3A21C002B9B68 /* ModeanSocialWord.m */; };
 		C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735F719A3A230002B9B68 /* OpticalWordStore.m */; };
 		C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */; };
+		C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */; };
+		C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */; };
 		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
 		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
 		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
@@ -70,6 +72,10 @@
 		C97735F719A3A230002B9B68 /* OpticalWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpticalWordStore.m; sourceTree = "<group>"; };
 		C97735F919A3A240002B9B68 /* PhysicalWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicalWordStore.h; sourceTree = "<group>"; };
 		C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicalWordStore.m; sourceTree = "<group>"; };
+		C97735FC19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSelectionPlotScrollView_iPad.h; sourceTree = "<group>"; };
+		C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotScrollView_iPad.m; sourceTree = "<group>"; };
+		C97735FF19A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSelectionPlotViewController_iPad.h; sourceTree = "<group>"; };
+		C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotViewController_iPad.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +192,10 @@
 				C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */,
 				C9CAB41A19914B730004B6D6 /* Main_iPhone.storyboard */,
 				C9CAB41D19914B730004B6D6 /* Main_iPad.storyboard */,
+				C97735FF19A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.h */,
+				C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */,
+				C97735FC19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.h */,
+				C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */,
 				C97735E719A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.h */,
 				C97735E819A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m */,
 				C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */,
@@ -347,9 +357,11 @@
 				C97735E919A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m in Sources */,
 				C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */,
 				C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */,
+				C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */,
 				C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */,
 				C97735EF19A3A1D8002B9B68 /* ElementaryWord1.m in Sources */,
 				C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */,
+				C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */,
 				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
