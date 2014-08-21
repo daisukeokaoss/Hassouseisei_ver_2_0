@@ -16,4 +16,5 @@
 -(void)NSUserDefaultsFromUI;
 -(void)UI_FromNSUserDefaults;
 
+-(void)WordPoolChanged;
 @end

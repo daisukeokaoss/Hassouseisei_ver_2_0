@@ -55,6 +55,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
     }
     return self;
 }
@@ -74,7 +75,11 @@
 -(void)dataStructureFromUI
 {
     BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
-    GlobalSetting *setting = appdelegate.globalSetting;
+    GlobalSetting *setting;
+    if(appdelegate.globalSetting == nil){
+        setting = [[GlobalSetting alloc] init];
+    }
+    setting = appdelegate.globalSetting;
     setting.BiologicalWordGenerate = self.BiologicalWordSwitch.on;
     setting.ChemicalWordGenerate = self.ChemicalWordSwitch.on;
     setting.ITWordGenerate = self.ITWordSwitch.on;
@@ -250,13 +255,13 @@
     [self addSubview:self.physicalWordSwitch];
     [self addSubview:self.WordCountLabel];
     
-    [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.ITWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.ModernSocialWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.OpticalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
-    [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ITWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ModernSocialWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.OpticalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
 }
 
@@ -265,6 +270,8 @@
     [self dataStructureFromUI];
 
     [self.WordCountLabel setText:[NSString stringWithFormat:@"ワード数は%d個です",[WordSetControl CountWordPool]]];
+    
+    [self.WordCountLabel sizeToFit];
     
 }
 
