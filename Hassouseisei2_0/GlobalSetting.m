@@ -17,6 +17,8 @@ NSString * const  OpticalWordGenerateString = @"OpticalWordGenerateString";
 NSString * const  PhysicalWordGenerateString =@"PhysicalWordGenerateString";
 NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString";
 
+NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
+
 @implementation GlobalSetting
 
 
@@ -33,6 +35,7 @@ NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString"
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
+    [defaults setObject:@(YES) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
     
@@ -45,6 +48,8 @@ NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString"
     self.OpticalWordGenerate      = [ud boolForKey:OpticalWordGenerateString];
     self.PhysicalWordGenerate     = [ud boolForKey:PhysicalWordGenerateString];
     self.ElementaryWordGenerate   = [ud boolForKey:ElementaryWordGenerateString];
+    
+    self.NumberOfGenerateWord     = [ud integerForKey:NumberOfGenerateWordString];
     
     
 }
@@ -59,7 +64,7 @@ NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString"
     [ud setBool:self.OpticalWordGenerate forKey:OpticalWordGenerateString];
     [ud setBool:self.PhysicalWordGenerate forKey:PhysicalWordGenerateString];
     [ud setBool:self.ElementaryWordGenerate forKey:ElementaryWordGenerateString];
-   // [ud setInteger:<#(NSInteger)#> forKey:<#(NSString *)#>]
+    [ud setInteger:self.NumberOfGenerateWord forKey:NumberOfGenerateWordString];
     
     [ud synchronize];
 }

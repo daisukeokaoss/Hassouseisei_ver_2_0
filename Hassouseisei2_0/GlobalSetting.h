@@ -22,6 +22,7 @@ extern NSString * const  ModernSocialWordGenerateString;
 extern NSString * const  OpticalWordGenerateString;
 extern NSString * const  PhysicalWordGenerateString;
 extern NSString * const  ElementaryWordGenerateString;
+extern NSString * const  NumberOfGenerateWordString;
 
 
 
