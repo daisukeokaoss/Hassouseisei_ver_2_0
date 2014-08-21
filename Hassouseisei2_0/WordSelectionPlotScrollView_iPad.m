@@ -11,6 +11,7 @@
 
 #import "GlobalSetting.h"
 #import "BrainStormingAppDelegate.h"
+#import "WordSetControl.h"
 //
 
 
@@ -239,6 +240,19 @@
     [self addSubview:self.ElementaryWordSwitch];
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
+    
+    [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.ITWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.ModernSocialWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.OpticalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
+    
+}
+
+-(void)WordPoolChanged
+{
     
 }
 

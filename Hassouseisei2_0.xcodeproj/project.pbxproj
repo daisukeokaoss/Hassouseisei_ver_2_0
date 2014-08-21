@@ -19,6 +19,7 @@
 		C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735FD19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m */; };
 		C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */; };
 		C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360319A4D155002B9B68 /* GlobalSetting.m */; };
+		C977360819A610CC002B9B68 /* WordSetControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360719A610CC002B9B68 /* WordSetControl.m */; };
 		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
 		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
 		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
@@ -79,6 +80,8 @@
 		C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSelectionPlotViewController_iPad.m; sourceTree = "<group>"; };
 		C977360219A4D154002B9B68 /* GlobalSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSetting.h; sourceTree = "<group>"; };
 		C977360319A4D155002B9B68 /* GlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSetting.m; sourceTree = "<group>"; };
+		C977360619A610CC002B9B68 /* WordSetControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSetControl.h; sourceTree = "<group>"; };
+		C977360719A610CC002B9B68 /* WordSetControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSetControl.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +218,8 @@
 				C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */,
 				C977360219A4D154002B9B68 /* GlobalSetting.h */,
 				C977360319A4D155002B9B68 /* GlobalSetting.m */,
+				C977360619A610CC002B9B68 /* WordSetControl.h */,
+				C977360719A610CC002B9B68 /* WordSetControl.m */,
 				C97735E619A27609002B9B68 /* Japanese */,
 				C9CAB44319914D1B0004B6D6 /* 09-chat-2.png */,
 				C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */,
@@ -366,6 +371,7 @@
 				C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */,
 				C97735EF19A3A1D8002B9B68 /* ElementaryWord1.m in Sources */,
 				C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */,
+				C977360819A610CC002B9B68 /* WordSetControl.m in Sources */,
 				C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */,
 				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
