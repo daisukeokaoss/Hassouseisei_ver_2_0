@@ -95,6 +95,33 @@
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
+
+    
+    [ud setBool:self.BiologicalWordSwitch.on forKey:BiologicalWordGenerateString];
+    [ud setBool:self.ChemicalWordSwitch.on forKey:ChemicalWordGenerateString];
+    [ud setBool:self.ITWordSwitch.on forKey:ITWordGenerateStringString];
+    [ud setBool:self.ModernSocialWordSwitch.on forKey:ModernSocialWordGenerateString];
+    [ud setBool:self.OpticalWordSwitch.on forKey:OpticalWordGenerateString];
+    [ud setBool:self.physicalWordSwitch.on forKey:PhysicalWordGenerateString];
+    [ud setBool:self.ElementaryWordSwitch.on forKey:ElementaryWordGenerateString];
+    
+    int index = [self.wordCountSegmentedControl selectedSegmentIndex];
+    
+    NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
+    NSString  *number = items[index];
+    int number_int = number.intValue;
+    [ud setInteger:number_int forKey:NumberOfGenerateWordString];
+    
+    [ud synchronize];
+    
+
+    
+}
+
+-(void)UI_FromNSUserDefaults
+{
+     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
     NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
     [defaults setObject:@(YES) forKey:BiologicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ChemicalWordGenerateString];
@@ -103,7 +130,8 @@
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
-    [defaults setObject:@(YES) forKey:NumberOfGenerateWordString];
+    //[defaults setObject:@(YES) forKey:NumberOfGenerateWordString];
+    [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
     [self.BiologicalWordSwitch setOn:[ud boolForKey:BiologicalWordGenerateString] animated:YES];
@@ -124,27 +152,6 @@
             [self.wordCountSegmentedControl setSelectedSegmentIndex:i];
         }
     }
-    
-}
-
--(void)UI_FromNSUserDefaults
-{
-     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    
-    [ud setBool:self.BiologicalWordSwitch.on forKey:BiologicalWordGenerateString];
-    [ud setBool:self.ChemicalWordSwitch.on forKey:ChemicalWordGenerateString];
-    [ud setBool:self.ITWordSwitch.on forKey:ITWordGenerateStringString];
-    [ud setBool:self.ModernSocialWordSwitch.on forKey:ModernSocialWordGenerateString];
-    [ud setBool:self.OpticalWordSwitch.on forKey:OpticalWordGenerateString];
-    [ud setBool:self.physicalWordSwitch.on forKey:PhysicalWordGenerateString];
-    [ud setBool:self.ElementaryWordSwitch.on forKey:ElementaryWordGenerateString];
-    
-    int index = [self.wordCountSegmentedControl selectedSegmentIndex];
-    
-    NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
-    NSString  *number = items[index];
-    int number_int = number.intValue;
-    [ud setInteger:number_int forKey:NumberOfGenerateWordString];
     
     [ud synchronize];
     
