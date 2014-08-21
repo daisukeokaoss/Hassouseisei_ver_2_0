@@ -11,6 +11,7 @@
 
 //ユーザーインクルード
 #import "WordSelectionPlotScrollView_iPad.h"
+#import "BrainStormingAppDelegate.h"
 
 @interface WordSelectionPlotViewController_iPad ()
 @property (weak, nonatomic) IBOutlet WordSelectionPlotScrollView_iPad *myScrollView;
@@ -40,6 +41,19 @@
     CGSize size = CGSizeMake(ViewWidth, ViewHeight);
     
     [self.myScrollView BuildUserInterfaceWithCGSize:size];
+    
+    
+    [self.myScrollView UI_FromNSUserDefaults];
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self.myScrollView NSUserDefaultsFromUI];
+    
+    [self.myScrollView dataStructureFromUI];
     
 }
 

@@ -38,4 +38,8 @@ extern NSString * const  NumberOfGenerateWordString;
 
 @property (nonatomic) int NumberOfGenerateWord;
 
+
+-(void)dataStructureFromUserDefault;
+-(void)StoreUserDefaultFromDataStructure;
+
 @end

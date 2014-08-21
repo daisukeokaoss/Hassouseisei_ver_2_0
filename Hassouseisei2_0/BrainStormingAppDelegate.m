@@ -13,6 +13,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    GlobalSetting *setting = appdelegate.globalSetting;
+    
+    [setting dataStructureFromUserDefault];
+    
     return YES;
 }
 							

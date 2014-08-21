@@ -12,4 +12,10 @@
 
 -(void)BuildUserInterfaceWithCGSize:(CGSize)size;
 
+-(void)UI_FromNSUserDefaults;
+
+-(void)NSUserDefaultsFromUI;
+
+-(void)dataStructureFromUI;
+
 @end

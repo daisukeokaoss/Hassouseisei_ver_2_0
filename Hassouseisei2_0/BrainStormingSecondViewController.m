@@ -42,6 +42,18 @@
     [self.myScrollView setFrame:WordSelectionScrollViewFrame];
     [self.myScrollView BuildUserInterfaceWithCGSize:WordSelectionScrollViewSize];
     
+        [self.myScrollView UI_FromNSUserDefaults];
+    
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self.myScrollView NSUserDefaultsFromUI];
+    
+    [self.myScrollView dataStructureFromUI];
+    
 }
 
 - (void)didReceiveMemoryWarning
