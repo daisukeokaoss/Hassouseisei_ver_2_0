@@ -24,6 +24,20 @@ NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString"
 {
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    NSMutableDictionary *defaults = [NSMutableDictionary dictionary];
+    [defaults setObject:@(YES) forKey:BiologicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:ChemicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:ITWordGenerateStringString];
+    [defaults setObject:@(YES) forKey:ModernSocialWordGenerateString];
+    [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
+    [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
+    [ud registerDefaults:defaults];
+    
+    
+    
+    
     self.BiologicalWordGenerate = [ud boolForKey:BiologicalWordGenerateString];
     self.ChemicalWordGenerate   = [ud boolForKey:ChemicalWordGenerateString];
     self.ITWordGenerate         = [ud boolForKey:ITWordGenerateStringString];
@@ -33,6 +47,21 @@ NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString"
     self.ElementaryWordGenerate   = [ud boolForKey:ElementaryWordGenerateString];
     
     
+}
+
+-(void)StoreUserDefaultFromDataStructure
+{
+     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setBool:self.BiologicalWordGenerate forKey:BiologicalWordGenerateString];
+    [ud setBool:self.ChemicalWordGenerate forKey:ChemicalWordGenerateString];
+    [ud setBool:self.ITWordGenerate forKey:ITWordGenerateStringString];
+    [ud setBool:self.ModernSocialWordGenerate forKey:ModernSocialWordGenerateString];
+    [ud setBool:self.OpticalWordGenerate forKey:OpticalWordGenerateString];
+    [ud setBool:self.PhysicalWordGenerate forKey:PhysicalWordGenerateString];
+    [ud setBool:self.ElementaryWordGenerate forKey:ElementaryWordGenerateString];
+   // [ud setInteger:<#(NSInteger)#> forKey:<#(NSString *)#>]
+    
+    [ud synchronize];
 }
 
 
