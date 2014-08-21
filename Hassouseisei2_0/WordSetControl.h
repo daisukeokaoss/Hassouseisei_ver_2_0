@@ -10,4 +10,6 @@
 
 @interface WordSetControl : NSObject
 
++(int)CountWordPool;
+
 @end

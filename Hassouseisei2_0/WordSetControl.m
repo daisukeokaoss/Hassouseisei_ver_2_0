@@ -26,7 +26,7 @@
 
 @implementation WordSetControl
 
--(int)CountWordPool
++(int)CountWordPool
 {
     BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     GlobalSetting *setting = appdelegate.globalSetting;

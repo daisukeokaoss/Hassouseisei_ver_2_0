@@ -41,6 +41,9 @@
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
 
 
+@property (nonatomic,strong) UILabel *WordCountLabel;
+
+
 @end
 
 
@@ -221,6 +224,11 @@
     [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
     
+    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36, Y_Offset + 339, 68, 21)];
+    
+    [self.WordCountLabel setText:@"ワード数は0個です"];
+    [self.WordCountLabel sizeToFit];
+    
     
     
     
@@ -240,6 +248,7 @@
     [self addSubview:self.ElementaryWordSwitch];
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
+    [self addSubview:self.WordCountLabel];
     
     [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
     [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventEditingChanged];
@@ -253,6 +262,9 @@
 
 -(void)WordPoolChanged
 {
+    [self dataStructureFromUI];
+
+    [self.WordCountLabel setText:[NSString stringWithFormat:@"ワード数は%d個です",[WordSetControl CountWordPool]]];
     
 }
 
