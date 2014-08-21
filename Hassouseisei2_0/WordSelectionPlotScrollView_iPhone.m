@@ -11,6 +11,7 @@
 
 //ユーザーインクルード
 #import "BrainStormingAppDelegate.h"
+#import "WordSetControl.h"
 
 
 @interface WordSelectionPlotScrollView_iPhone()
@@ -37,6 +38,8 @@
 
 @property (nonatomic,strong) UISwitch *ElementaryWordSwitch;
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
+
+@property (nonatomic,strong) UILabel *WordCountLabel;
 
 @end
 
@@ -94,13 +97,18 @@
     
     self.PhysicalWordLabel   = [[UILabel alloc] initWithFrame:CGRectMake(36, 261, 68, 21)];
     self.physicalWordSwitch  = [[UISwitch alloc] initWithFrame:CGRectMake(237,261,51,31)];
-    [self.PhysicalWordLabel setText:@"一般用語"];
+    [self.PhysicalWordLabel setText:@"物理学用語"];
     [self.PhysicalWordLabel sizeToFit];
     
     self.ElementaryWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(36,300, 68, 21)];
     self.ElementaryWordSwitch= [[UISwitch alloc] initWithFrame:CGRectMake(237,300, 51, 31)];
     [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
+    
+    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 339, 68, 21)];
+    
+    [self.WordCountLabel setText:@"ワード数は0個です"];
+    [self.WordCountLabel sizeToFit];
     
     
     
@@ -119,10 +127,17 @@
     [self addSubview:self.ElementaryWordSwitch];
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
+    [self addSubview:self.WordCountLabel];
     
+    [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ITWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ModernSocialWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.OpticalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
-    
-    //ここ、作りかけ
+
     
     
     
@@ -226,6 +241,16 @@
 
     
 
+    
+}
+
+-(void)WordPoolChanged
+{
+    [self dataStructureFromUI];
+    
+    [self.WordCountLabel setText:[NSString stringWithFormat:@"ワード数は%d個です",[WordSetControl CountWordPool]]];
+    
+    [self.WordCountLabel sizeToFit];
     
 }
 

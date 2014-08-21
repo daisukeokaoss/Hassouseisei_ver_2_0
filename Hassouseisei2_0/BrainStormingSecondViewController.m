@@ -44,6 +44,8 @@
     
         [self.myScrollView UI_FromNSUserDefaults];
     
+    [self.myScrollView WordPoolChanged];
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated

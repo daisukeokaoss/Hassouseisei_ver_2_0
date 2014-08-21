@@ -18,4 +18,6 @@
 
 -(void)dataStructureFromUI;
 
+-(void)WordPoolChanged;
+
 @end
