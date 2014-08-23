@@ -69,7 +69,7 @@
         [self.WordPool_Global addObjectsFromArray:[BiologicalWordStore GenerateWordArray]];
     }
     if(setting.ChemicalWordGenerate){
-        [self.WordPool_Global addObjectsFromArray:[BiologicalWordStore GenerateWordArray]];
+        [self.WordPool_Global addObjectsFromArray:[ChemicalWordStore GenerateWordArray]];
     }
     if(setting.ElementaryWordGenerate){
         [self.WordPool_Global addObjectsFromArray:[ElementaryWord1 GenerateWordArray]];

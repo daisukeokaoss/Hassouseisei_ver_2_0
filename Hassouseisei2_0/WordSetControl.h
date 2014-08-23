@@ -11,5 +11,7 @@
 @interface WordSetControl : NSObject
 
 +(int)CountWordPool;
+-(void)PrepareForArray;
+-(NSString*)OutputOneWord_afterPrepareForArray;
 
 @end

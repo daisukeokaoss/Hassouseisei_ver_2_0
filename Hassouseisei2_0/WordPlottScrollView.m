@@ -11,6 +11,7 @@
 //ユーザーインポート
 #import "QBFlatButton.h"
 #import "BrainStormingAppDelegate.h"
+#import "WordSetControl.h"
 
 
 @interface WordPlottScrollView()
@@ -141,9 +142,9 @@
     
     
     int QBFlatButton_XCoordinateOffset = Label_XCoodinateOffset;
-    int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/430.0));
+    int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(300.0/430.0));
     int QBFlatButton_Width             = ScrollView_width - Label_XCoodinateOffset*2;
-    int QBFlatButton_Height            = (int)(ScrollView_height *(60.0/430));
+    int QBFlatButton_Height            = (int)(ScrollView_height *(80.0/430));
     
     self.genereteButton = [[QBFlatButton alloc] initWithFrame:CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
                                                                          QBFlatButton_Width , QBFlatButton_Height)];
@@ -161,9 +162,125 @@
     
     [self addSubview:self.genereteButton];
     
-    // [self.genereteButton addTarget:self action:@selector(generateButton_touchDown:)
-    //         forControlEvents:UIControlEventTouchDown];
+     [self.genereteButton addTarget:self action:@selector(generateButton_touchDown)
+             forControlEvents:UIControlEventTouchDown];
     
+    [self generateButton_touchDown];
+    
+    
+}
+
+-(void)generateButton_touchDown
+{
+    WordSetControl *wordPool = [[WordSetControl alloc] init];
+    [wordPool PrepareForArray];
+    
+    BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    GlobalSetting *setting = appdelegate.globalSetting;
+    
+    NSMutableArray *WordArray = [[NSMutableArray alloc] init];
+    
+    int GenerateWordCount =7;
+    for(int i=0;i<GenerateWordCount;i++){
+        bool flag=true;
+        do{
+            NSString *oneWord = [wordPool OutputOneWord_afterPrepareForArray];
+            [WordArray addObject:oneWord];
+            for(int j=0;j<i;j++){
+                if([WordArray[j] isEqualToString:oneWord]){
+                    flag =false;
+                }
+            }
+        }while(flag == false);
+    }
+    if(setting.NumberOfGenerateWord == 2){
+        //生成ワード２個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:@""];
+        [self.FourthWordLabel setText:@""];
+        [self.FifthWordLabel setText:@""];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+        
+    }else if(setting.NumberOfGenerateWord == 3){
+        //生成ワード３個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:WordArray[2]];
+        [self.FourthWordLabel setText:@""];
+        [self.FifthWordLabel setText:@""];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+    }else if(setting.NumberOfGenerateWord == 4){
+        //生成ワード４個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:WordArray[2]];
+        [self.FourthWordLabel setText:WordArray[3]];
+        [self.FifthWordLabel setText:@""];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+    }else if(setting.NumberOfGenerateWord == 5){
+        //生成ワード５個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:WordArray[2]];
+        [self.FourthWordLabel setText:WordArray[3]];
+        [self.FifthWordLabel setText:WordArray[4]];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+    }else if(setting.NumberOfGenerateWord == 6){
+        //生成ワード６個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:WordArray[2]];
+        [self.FourthWordLabel setText:WordArray[3]];
+        [self.FifthWordLabel setText:WordArray[4]];
+        [self.SixthWordLabel setText:WordArray[5]];
+        [self.SeventhWordLabel setText:@""];
+    }else if(setting.NumberOfGenerateWord == 7){
+        //生成ワード７個
+        [self.FirstWordLabel setText:WordArray[0]];
+        [self.SecondWordLabel setText:WordArray[1]];
+        [self.ThirdWordLabel setText:WordArray[2]];
+        [self.FourthWordLabel setText:WordArray[3]];
+        [self.FifthWordLabel setText:WordArray[4]];
+        [self.SixthWordLabel setText:WordArray[5]];
+        [self.SeventhWordLabel setText:WordArray[6]];
+    }
+    int MaxWidth =0;
+    if([self.FirstWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.FirstWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if([self.SecondWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.SecondWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if([self.ThirdWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.ThirdWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if([self.FourthWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.FourthWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if([self.SixthWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.SixthWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if([self.SeventhWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.SeventhWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
+    if(self.FirstWordLabel.frame.origin.x +MaxWidth > self.contentSize.width){
+        [self setContentSize:CGSizeMake(self.FirstWordLabel.frame.origin.x +MaxWidth,self.bounds.size.height)];
+    }else{
+        [self setContentSize:CGSizeMake(self.bounds.size.width,self.bounds.size.height)];
+    }
+    
+    [self.FirstWordLabel sizeToFit];
+    [self.SecondWordLabel sizeToFit];
+    [self.ThirdWordLabel sizeToFit];
+    [self.FourthWordLabel sizeToFit];
+    [self.FifthWordLabel sizeToFit];
+    [self.SixthWordLabel sizeToFit];
+    [self.SeventhWordLabel sizeToFit];
     
 }
 
