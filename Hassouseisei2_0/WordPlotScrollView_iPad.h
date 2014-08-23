@@ -13,6 +13,8 @@
 
 @interface WordPlotScrollView_iPad : UIScrollView
 
+@property (strong,nonatomic) UIViewController *mainViewController;
+
 
 
 -(void)SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width;

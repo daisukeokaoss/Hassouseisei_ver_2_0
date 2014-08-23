@@ -13,6 +13,8 @@
 #import "BrainStormingAppDelegate.h"
 #import "WordSetControl.h"
 
+#import "SearchViewController.h"
+
 
 @interface WordPlottScrollView()
 @property (strong, nonatomic)  UILabel *FirstWordLabel;
@@ -25,7 +27,7 @@
 
 @property (strong, nonatomic)  UILabel *SeventhWordLabel;
 
-@property (strong,nonatomic) UIViewController *mainViewController;
+//@property (strong,nonatomic) UIViewController *mainViewController;
 
 @property (strong,nonatomic) QBFlatButton *genereteButton;
 
@@ -41,6 +43,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.userInteractionEnabled = true;
     }
     return self;
 }
@@ -166,6 +169,68 @@
              forControlEvents:UIControlEventTouchDown];
     
     [self generateButton_touchDown];
+    
+    self.FirstWordLabel.userInteractionEnabled = YES;
+    self.SecondWordLabel.userInteractionEnabled = YES;
+    self.ThirdWordLabel.userInteractionEnabled = YES;
+    self.FourthWordLabel.userInteractionEnabled = YES;
+    self.FifthWordLabel.userInteractionEnabled = YES;
+    self.SixthWordLabel.userInteractionEnabled = YES;
+    self.SeventhWordLabel.userInteractionEnabled = YES;
+    // self.EightsWordLabel.userInteractionEnabled = YES;
+    self.genereteButton.userInteractionEnabled = YES;
+    
+    self.FirstWordLabel.tag = 101;
+    self.SecondWordLabel.tag = 102;
+    self.ThirdWordLabel.tag  = 103;
+    self.FourthWordLabel.tag = 104;
+    self.FifthWordLabel.tag  = 105;
+    self.SixthWordLabel.tag  = 106;
+    self.SeventhWordLabel.tag = 107;
+    self.genereteButton.tag = 108;
+    self.tag  = 109;
+    
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[self nextResponder] touchesBegan:touches withEvent:event];
+    [self setContentOffset:CGPointMake(0.0f, 0.0f) animated:YES];
+    
+    
+    UITouch *touch = [[event allTouches]anyObject];
+    if(touch.view.tag == self.FirstWordLabel.tag){
+        [self WordLavelClick:self.FirstWordLabel];
+    }else if(touch.view.tag == self.SecondWordLabel.tag){
+        [self WordLavelClick:self.SecondWordLabel];
+    }else if(touch.view.tag == self.ThirdWordLabel.tag){
+        [self WordLavelClick:self.ThirdWordLabel];
+    }else if(touch.view.tag == self.FourthWordLabel.tag){
+        [self WordLavelClick:self.FourthWordLabel];
+    }else if(touch.view.tag == self.FifthWordLabel.tag){
+        [self WordLavelClick:self.FifthWordLabel];
+    }else if(touch.view.tag == self.SixthWordLabel.tag){
+        [self WordLavelClick:self.SixthWordLabel];
+    }else if(touch.view.tag == self.SeventhWordLabel.tag){
+        [self WordLavelClick:self.SeventhWordLabel];
+    }else {
+        
+    }
+    
+}
+
+-(void)WordLavelClick:(UILabel*)sender
+{
+    if([sender.text isEqual: @""]){
+        return;
+    }
+    
+    SearchViewController* ViewController = [[SearchViewController alloc] init];
+    ViewController.SearchString = sender.text;
+    ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    //アニメーションを有効にしてビューを表示します。
+    [self.mainViewController presentViewController: ViewController animated:YES completion: nil];
     
     
 }
