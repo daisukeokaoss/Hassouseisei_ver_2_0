@@ -37,7 +37,7 @@
     
     //////////////////////////////////////////////////////////
     //ユーザーエージェントを設定
-    NSString *modelname = [ [ UIDevice currentDevice] model];
+   // NSString *modelname = [ [ UIDevice currentDevice] model];
    /* if([modelname isEqualToString:@"iPad Simulator"]||[modelname isEqualToString:@"iPad"]){
         
             NSDictionary *dictionnary = [[NSDictionary alloc] initWithObjectsAndKeys:@"Mozilla/5.0 (iPad; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A465 Safari/9537.53", @"UserAgent", nil];
@@ -61,6 +61,7 @@
     
     btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame = CGRectMake(0, 20, self.view.bounds.size.width, 60);
+    btn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [btn setBackgroundColor:[UIColor whiteColor]];
 
     [btn setTitle:@"戻る" forState:UIControlStateNormal];
