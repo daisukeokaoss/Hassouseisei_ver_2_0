@@ -198,9 +198,9 @@
     
     int index = [self.wordCountSegmentedControl selectedSegmentIndex];
     
-    if(index<2||7<index){
-        index = 2;
-    }
+   // if(index<2||7<index){
+     //   index = 2;
+    //}
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     NSString  *number = items[index];
