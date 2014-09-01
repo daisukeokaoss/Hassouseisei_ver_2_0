@@ -227,7 +227,7 @@
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
-    [defaults setObject:@(YES) forKey:NumberOfGenerateWordString];
+    [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
     
@@ -242,6 +242,9 @@
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     
     int NumberCount = [ud integerForKey:NumberOfGenerateWordString];
+    //if(!(2<=NumberCount&&NumberCount<=7)){
+    //    NumberCount = 7;
+    //}
     
     for(int i=0;i<items.count;i++){
         NSString *item = items[i];

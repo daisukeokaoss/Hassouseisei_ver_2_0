@@ -35,7 +35,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
-    [defaults setObject:@(YES) forKey:NumberOfGenerateWordString];
+    [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
     
