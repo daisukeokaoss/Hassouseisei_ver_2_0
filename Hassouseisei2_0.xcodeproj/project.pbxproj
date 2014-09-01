@@ -45,6 +45,10 @@
 		C9D8D56619A8F0B1007887C8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D56519A8F0B1007887C8 /* SearchViewController.m */; };
 		C9D8D5B719B4A2DE007887C8 /* CopyrightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D5B619B4A2DE007887C8 /* CopyrightView.m */; };
 		C9D8D5BA19B4A2EE007887C8 /* CopyrightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D5B919B4A2EE007887C8 /* CopyrightViewController.m */; };
+		C9D8D5BC19B4B0B7007887C8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8D5BB19B4B0B7007887C8 /* Icon.png */; };
+		C9D8D5BE19B4B0D1007887C8 /* Icon@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8D5BD19B4B0D1007887C8 /* Icon@2x-1.png */; };
+		C9D8D5C019B4B0DA007887C8 /* Icon@2x-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8D5BF19B4B0DA007887C8 /* Icon@2x-2.png */; };
+		C9D8D5C219B4B0E1007887C8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D8D5C119B4B0E1007887C8 /* Icon@2x.png */; };
 		C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +125,10 @@
 		C9D8D5B619B4A2DE007887C8 /* CopyrightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightView.m; sourceTree = "<group>"; };
 		C9D8D5B819B4A2EE007887C8 /* CopyrightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightViewController.h; sourceTree = "<group>"; };
 		C9D8D5B919B4A2EE007887C8 /* CopyrightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightViewController.m; sourceTree = "<group>"; };
+		C9D8D5BB19B4B0B7007887C8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C9D8D5BD19B4B0D1007887C8 /* Icon@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x-1.png"; sourceTree = "<group>"; };
+		C9D8D5BF19B4B0DA007887C8 /* Icon@2x-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x-2.png"; sourceTree = "<group>"; };
+		C9D8D5C119B4B0E1007887C8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C9EEA0AD19966BBD00389853 /* BrainStormingFirstViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainStormingFirstViewController_iPad.h; sourceTree = "<group>"; };
 		C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainStormingFirstViewController_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +211,10 @@
 		C9CAB40E19914B730004B6D6 /* Hassouseisei2_0 */ = {
 			isa = PBXGroup;
 			children = (
+				C9D8D5BB19B4B0B7007887C8 /* Icon.png */,
+				C9D8D5BD19B4B0D1007887C8 /* Icon@2x-1.png */,
+				C9D8D5BF19B4B0DA007887C8 /* Icon@2x-2.png */,
+				C9D8D5C119B4B0E1007887C8 /* Icon@2x.png */,
 				C9CAB41719914B730004B6D6 /* BrainStormingAppDelegate.h */,
 				C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */,
 				C9CAB41A19914B730004B6D6 /* Main_iPhone.storyboard */,
@@ -352,10 +364,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D8D5BC19B4B0B7007887C8 /* Icon.png in Resources */,
+				C9D8D5C219B4B0E1007887C8 /* Icon@2x.png in Resources */,
+				C9D8D5BE19B4B0D1007887C8 /* Icon@2x-1.png in Resources */,
 				C9CAB44819914D1B0004B6D6 /* 09-chat-2@2x.png in Resources */,
 				C9CAB44919914D1B0004B6D6 /* 15-tags.png in Resources */,
 				C9CAB41F19914B730004B6D6 /* Main_iPad.storyboard in Resources */,
 				C9CAB42719914B730004B6D6 /* Images.xcassets in Resources */,
+				C9D8D5C019B4B0DA007887C8 /* Icon@2x-2.png in Resources */,
 				C9CAB41C19914B730004B6D6 /* Main_iPhone.storyboard in Resources */,
 				C9CAB44A19914D1B0004B6D6 /* 15-tags@2x.png in Resources */,
 				C9CAB41319914B730004B6D6 /* InfoPlist.strings in Resources */,
