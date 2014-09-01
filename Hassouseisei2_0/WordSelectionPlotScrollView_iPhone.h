@@ -22,4 +22,6 @@
 
 @property (nonatomic,strong) UIViewController *SuperViewController;
 
+//@property (strong,nonatomic) UIViewController *mainViewController;
+
 @end

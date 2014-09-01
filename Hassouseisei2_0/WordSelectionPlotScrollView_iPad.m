@@ -12,6 +12,7 @@
 #import "GlobalSetting.h"
 #import "BrainStormingAppDelegate.h"
 #import "WordSetControl.h"
+#import "CopyrightViewController.h"
 //
 
 
@@ -42,6 +43,8 @@
 
 
 @property (nonatomic,strong) UILabel *WordCountLabel;
+
+@property (nonatomic,strong) UIButton *CopyRightButton;
 
 
 @end
@@ -234,6 +237,11 @@
     [self.WordCountLabel setText:@"ワード数は0個です"];
     [self.WordCountLabel sizeToFit];
     
+    self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [self.CopyRightButton setFrame:CGRectMake(X_Offset+36, Y_Offset + 360, 50, 50)];
+    
+    [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     
     
     
@@ -254,6 +262,7 @@
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
     [self addSubview:self.WordCountLabel];
+    [self addSubview:self.CopyRightButton];
     
     [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
@@ -263,6 +272,12 @@
     [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
+}
+
+-(void)InfoButtonClick
+{
+    CopyrightViewController *nc = [[CopyrightViewController alloc] init];
+    [self.SuperViewController presentViewController:nc animated:YES completion:nil];
 }
 
 -(void)WordPoolChanged

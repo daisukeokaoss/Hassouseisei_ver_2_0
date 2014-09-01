@@ -17,4 +17,6 @@
 -(void)UI_FromNSUserDefaults;
 
 -(void)WordPoolChanged;
+
+@property (nonatomic,strong) UIViewController *SuperViewController;
 @end

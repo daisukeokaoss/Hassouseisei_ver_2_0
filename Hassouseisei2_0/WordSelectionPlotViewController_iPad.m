@@ -42,7 +42,7 @@
     
     [self.myScrollView BuildUserInterfaceWithCGSize:size];
     
-    
+    self.myScrollView.SuperViewController = self;
     [self.myScrollView UI_FromNSUserDefaults];
     
     [self.myScrollView WordPoolChanged];
