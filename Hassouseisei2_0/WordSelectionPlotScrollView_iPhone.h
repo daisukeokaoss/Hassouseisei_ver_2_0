@@ -20,4 +20,6 @@
 
 -(void)WordPoolChanged;
 
+@property (nonatomic,strong) UIViewController *SuperViewController;
+
 @end

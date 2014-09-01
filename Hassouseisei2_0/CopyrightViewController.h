@@ -14,7 +14,7 @@
 
 @interface CopyrightViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet  CopyrightView *copyright1;
+
 
 
 @end

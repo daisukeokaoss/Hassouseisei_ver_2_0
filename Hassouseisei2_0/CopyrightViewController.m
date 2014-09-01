@@ -13,6 +13,8 @@
 
 
 @interface CopyrightViewController ()
+@property (nonatomic,strong)UIButton *ReturnButton;
+@property (nonatomic,strong)CopyrightView *myTextView;
 
 @end
 
@@ -33,9 +35,34 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.copyright1 InputCopyrightInformation];
+    self.myTextView = [[CopyrightView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y +50, self.view.bounds.size.width,self.view.bounds.size.height-50)];
+
+    [self.myTextView InputCopyrightInformation];
+    [self.myTextView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
+    [self.myTextView setEditable:NO];
+    
+    self.ReturnButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    
+    self.ReturnButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self.ReturnButton setBackgroundColor:[UIColor whiteColor]];
+    
+    [self.ReturnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [self.ReturnButton setTitle:@"戻る" forState:UIControlStateNormal];
+   // [self.ReturnButton setTitle:@"戻る" forState:UIControlStateHighlighted];
+   // [self.ReturnButton setTitle:@"戻る" forState:UIControlStateDisabled];
+    
+    [self.view addSubview:self.ReturnButton];
+    [self.view addSubview:self.myTextView];
+    
+    [self.ReturnButton addTarget:self action:@selector(ReturnButtonTap) forControlEvents:UIControlEventTouchUpInside];
+
+    
 }
-- (IBAction)ReturnButton:(id)sender {
+
+
+- (void)ReturnButtonTap
+{
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

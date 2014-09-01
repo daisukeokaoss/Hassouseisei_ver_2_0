@@ -13,6 +13,8 @@
 #import "BrainStormingAppDelegate.h"
 #import "WordSetControl.h"
 
+#include "CopyrightViewController.h"
+
 
 @interface WordSelectionPlotScrollView_iPhone()
 
@@ -116,6 +118,8 @@
     self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     [self.CopyRightButton setFrame:CGRectMake(36, 360, 50, 50)];
     
+    [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    
     
     
     
@@ -146,13 +150,12 @@
     [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
+}
 
-    
-    
-    
-    
-    
-    
+-(void)InfoButtonClick
+{
+    CopyrightViewController *nc = [[CopyrightViewController alloc] init];
+    [self.SuperViewController presentViewController:nc animated:YES completion:nil];
 }
 
 -(void)dataStructureFromUI

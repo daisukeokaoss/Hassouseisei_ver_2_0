@@ -38,7 +38,7 @@
         
     }
     
-    
+    self.myScrollView.SuperViewController = self;
     [self.myScrollView setFrame:WordSelectionScrollViewFrame];
     [self.myScrollView BuildUserInterfaceWithCGSize:WordSelectionScrollViewSize];
     
