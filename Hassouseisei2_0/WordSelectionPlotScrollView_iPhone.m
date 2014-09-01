@@ -41,6 +41,8 @@
 
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
+@property (nonatomic,strong) UIButton *CopyRightButton;
+
 @end
 
 @implementation WordSelectionPlotScrollView_iPhone
@@ -109,6 +111,12 @@
     
     [self.WordCountLabel setText:@"ワード数は0個です"];
     [self.WordCountLabel sizeToFit];
+
+    //self.CopyRightButton = [[UIButton alloc]//initWithFrame:CGRectMake(36, 379, 100, 100)];
+    self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [self.CopyRightButton setFrame:CGRectMake(36, 360, 50, 50)];
+    
+    
     
     
     
@@ -128,6 +136,7 @@
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
     [self addSubview:self.WordCountLabel];
+    [self addSubview:self.CopyRightButton];
     
     [self.BiologicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.ChemicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];

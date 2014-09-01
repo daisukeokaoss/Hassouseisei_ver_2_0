@@ -43,6 +43,8 @@
 		C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB44C1991521B0004B6D6 /* QBFlatButton.m */; };
 		C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */; };
 		C9D8D56619A8F0B1007887C8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D56519A8F0B1007887C8 /* SearchViewController.m */; };
+		C9D8D5B719B4A2DE007887C8 /* CopyrightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D5B619B4A2DE007887C8 /* CopyrightView.m */; };
+		C9D8D5BA19B4A2EE007887C8 /* CopyrightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D5B919B4A2EE007887C8 /* CopyrightViewController.m */; };
 		C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +117,10 @@
 		C9CAB44F1992213A0004B6D6 /* WordPlottScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPlottScrollView.m; sourceTree = "<group>"; };
 		C9D8D56419A8F0B1007887C8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		C9D8D56519A8F0B1007887C8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		C9D8D5B519B4A2DE007887C8 /* CopyrightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightView.h; sourceTree = "<group>"; };
+		C9D8D5B619B4A2DE007887C8 /* CopyrightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightView.m; sourceTree = "<group>"; };
+		C9D8D5B819B4A2EE007887C8 /* CopyrightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightViewController.h; sourceTree = "<group>"; };
+		C9D8D5B919B4A2EE007887C8 /* CopyrightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightViewController.m; sourceTree = "<group>"; };
 		C9EEA0AD19966BBD00389853 /* BrainStormingFirstViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainStormingFirstViewController_iPad.h; sourceTree = "<group>"; };
 		C9EEA0AE19966BBD00389853 /* BrainStormingFirstViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainStormingFirstViewController_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +231,10 @@
 				C977360319A4D155002B9B68 /* GlobalSetting.m */,
 				C977360619A610CC002B9B68 /* WordSetControl.h */,
 				C977360719A610CC002B9B68 /* WordSetControl.m */,
+				C9D8D5B519B4A2DE007887C8 /* CopyrightView.h */,
+				C9D8D5B619B4A2DE007887C8 /* CopyrightView.m */,
+				C9D8D5B819B4A2EE007887C8 /* CopyrightViewController.h */,
+				C9D8D5B919B4A2EE007887C8 /* CopyrightViewController.m */,
 				C97735E619A27609002B9B68 /* Japanese */,
 				C9CAB44319914D1B0004B6D6 /* 09-chat-2.png */,
 				C9CAB44419914D1B0004B6D6 /* 09-chat-2@2x.png */,
@@ -375,6 +385,7 @@
 				C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */,
 				C97735FB19A3A240002B9B68 /* PhysicalWordStore.m in Sources */,
 				C97735EF19A3A1D8002B9B68 /* ElementaryWord1.m in Sources */,
+				C9D8D5BA19B4A2EE007887C8 /* CopyrightViewController.m in Sources */,
 				C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */,
 				C977360819A610CC002B9B68 /* WordSetControl.m in Sources */,
 				C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */,
@@ -384,6 +395,7 @@
 				C9D8D56619A8F0B1007887C8 /* SearchViewController.m in Sources */,
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,
 				C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */,
+				C9D8D5B719B4A2DE007887C8 /* CopyrightView.m in Sources */,
 				C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */,
 				C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
