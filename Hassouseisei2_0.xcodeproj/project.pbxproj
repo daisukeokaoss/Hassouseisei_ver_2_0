@@ -529,7 +529,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -555,6 +555,7 @@
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9A337F90-1883-4B58-A65A-102246D3240B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -568,6 +569,7 @@
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9A337F90-1883-4B58-A65A-102246D3240B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
