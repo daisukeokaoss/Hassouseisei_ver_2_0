@@ -554,7 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "9A337F90-1883-4B58-A65A-102246D3240B";
 				WRAPPER_EXTENSION = app;
 			};
@@ -568,7 +568,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "9A337F90-1883-4B58-A65A-102246D3240B";
 				WRAPPER_EXTENSION = app;
 			};
