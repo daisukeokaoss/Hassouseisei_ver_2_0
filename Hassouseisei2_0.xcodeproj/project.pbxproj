@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70DC3BDF19C40203006CFC5E /* WorldHistoryWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */; };
 		C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */; };
 		C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E119A275DE002B9B68 /* BiologicalWordStore.m */; };
 		C97735E519A275FD002B9B68 /* ChemicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E419A275FD002B9B68 /* ChemicalWordStore.m */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70DC3BDD19C40203006CFC5E /* WorldHistoryWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldHistoryWordStore.h; sourceTree = "<group>"; };
+		70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldHistoryWordStore.m; sourceTree = "<group>"; };
 		C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPlotScrollView_iPad.h; sourceTree = "<group>"; };
 		C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordPlotScrollView_iPad.m; sourceTree = "<group>"; };
 		C97735E019A275DE002B9B68 /* BiologicalWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologicalWordStore.h; sourceTree = "<group>"; };
@@ -89,7 +92,7 @@
 		C977360319A4D155002B9B68 /* GlobalSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSetting.m; sourceTree = "<group>"; };
 		C977360619A610CC002B9B68 /* WordSetControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSetControl.h; sourceTree = "<group>"; };
 		C977360719A610CC002B9B68 /* WordSetControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSetControl.m; sourceTree = "<group>"; };
-		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hassouseisei2_0.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CAB40519914B730004B6D6 /* Hassouseisei2_0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Hassouseisei2_0.app; path = "発想生成.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C9CAB40C19914B730004B6D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,8 @@
 		C97735E619A27609002B9B68 /* Japanese */ = {
 			isa = PBXGroup;
 			children = (
+				70DC3BDD19C40203006CFC5E /* WorldHistoryWordStore.h */,
+				70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */,
 				C97735E019A275DE002B9B68 /* BiologicalWordStore.h */,
 				C97735E119A275DE002B9B68 /* BiologicalWordStore.m */,
 				C97735E319A275FD002B9B68 /* ChemicalWordStore.h */,
@@ -415,6 +420,7 @@
 				C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */,
 				C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
+				70DC3BDF19C40203006CFC5E /* WorldHistoryWordStore.m in Sources */,
 				C97735F519A3A21C002B9B68 /* ModeanSocialWord.m in Sources */,
 				C97735E519A275FD002B9B68 /* ChemicalWordStore.m in Sources */,
 			);

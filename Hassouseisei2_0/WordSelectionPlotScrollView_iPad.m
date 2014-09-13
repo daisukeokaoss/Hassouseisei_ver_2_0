@@ -42,6 +42,10 @@
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
 
 
+@property (nonatomic,strong) UISwitch *WorldHistoryWordSwitch;
+@property (nonatomic,strong) UILabel  *WorldHistoryWordLabel;
+
+
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
 @property (nonatomic,strong) UIButton *CopyRightButton;
@@ -231,6 +235,8 @@
     self.ElementaryWordSwitch= [[UISwitch alloc] initWithFrame:CGRectMake(X_Offset+237,Y_Offset+300, 51, 31)];
     [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
+    
+    
     
     self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36, Y_Offset + 339, 68, 21)];
     
