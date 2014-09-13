@@ -16,6 +16,7 @@ NSString * const  ModernSocialWordGenerateString = @"ModernSocialWordGenerate";
 NSString * const  OpticalWordGenerateString = @"OpticalWordGenerateString";
 NSString * const  PhysicalWordGenerateString =@"PhysicalWordGenerateString";
 NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString";
+NSString * const  WorldHistoryWordGenerateString = @"WorldHistoryWordGenerateString";
 
 NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
 
@@ -35,6 +36,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
+    [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
@@ -48,6 +50,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     self.OpticalWordGenerate      = [ud boolForKey:OpticalWordGenerateString];
     self.PhysicalWordGenerate     = [ud boolForKey:PhysicalWordGenerateString];
     self.ElementaryWordGenerate   = [ud boolForKey:ElementaryWordGenerateString];
+    self.WorldHistoryWordGenerate = [ud boolForKey:WorldHistoryWordGenerateString];
     
     self.NumberOfGenerateWord     = [ud integerForKey:NumberOfGenerateWordString];
     
@@ -64,6 +67,8 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [ud setBool:self.OpticalWordGenerate forKey:OpticalWordGenerateString];
     [ud setBool:self.PhysicalWordGenerate forKey:PhysicalWordGenerateString];
     [ud setBool:self.ElementaryWordGenerate forKey:ElementaryWordGenerateString];
+    [ud setBool:self.WorldHistoryWordGenerate forKey:WorldHistoryWordGenerateString];
+    
     [ud setInteger:self.NumberOfGenerateWord forKey:NumberOfGenerateWordString];
     
     [ud synchronize];

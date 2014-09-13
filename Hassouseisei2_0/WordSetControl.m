@@ -16,6 +16,7 @@
 #import "ModeanSocialWord.h"
 #import "OpticalWordStore.h"
 #import "PhysicalWordStore.h"
+#import "WorldHistoryWordStore.h"
 #import "BrainStormingAppDelegate.h"
 
 @interface WordSetControl()
@@ -54,6 +55,10 @@
     if(setting.PhysicalWordGenerate){
         [wordPool addObjectsFromArray:[PhysicalWordStore GenerateWordArray]];
     }
+    if(setting.WorldHistoryWordGenerate){
+        [wordPool addObjectsFromArray:[WorldHistoryWordStore GenerateWordArray]];
+    }
+    
     
     return [wordPool count];
 }
@@ -86,10 +91,17 @@
     if(setting.PhysicalWordGenerate){
         [self.WordPool_Global addObjectsFromArray:[PhysicalWordStore GenerateWordArray]];
     }
+    if(setting.WorldHistoryWordGenerate){
+        [self.WordPool_Global addObjectsFromArray:[WorldHistoryWordStore GenerateWordArray]];
+    }
 }
 
 -(NSString*)OutputOneWord_afterPrepareForArray
 {
+    if([self.WordPool_Global count] == 0){
+        return @"";
+    }
+    
     return self.WordPool_Global[arc4random()%self.WordPool_Global.count];
 }
 

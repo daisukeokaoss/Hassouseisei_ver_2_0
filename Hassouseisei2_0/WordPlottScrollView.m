@@ -48,39 +48,6 @@
     return self;
 }
 
-
--(void)SetUpUserInterface_iPadMini_iPad2
-{
-    
-}
-
--(void)SetUpUserInterface_iPadRetina
-{
-    
-}
-
--(void)SetUpUserInterface_iPhone3_iPhone3S
-{
-    
-}
-
--(void)SetUpUserInterface_iPhone4_iPhone4S
-{
-    
-}
-
--(void)SetUpUsetInterface_iPhone5_iPhone5S
-{
-    
-}
-
--(void)SetUpUserInterface_OtherDevice
-{
-    
-}
-
-
-
 -(void)SetupLabelAndQBFlatButtonAtSpecifiedWidthHeight_iPad_Height:(int)ScrollView_height Width:(int)ScrollView_width
 {
     //[self DeleteUserInterface];
@@ -130,7 +97,7 @@
     [self.SeventhWordLabel setText:@""];
     
     
-    [self TestInput];
+    //[self TestInput];
     
     
     
@@ -168,7 +135,7 @@
      [self.genereteButton addTarget:self action:@selector(generateButton_touchDown)
              forControlEvents:UIControlEventTouchDown];
     
-    [self generateButton_touchDown];
+    //[self generateButton_touchDown];
     
     self.FirstWordLabel.userInteractionEnabled = YES;
     self.SecondWordLabel.userInteractionEnabled = YES;
@@ -237,6 +204,17 @@
 
 -(void)generateButton_touchDown
 {
+    if([WordSetControl CountWordPool] == 0){
+        [self.FirstWordLabel setText:@""];
+        [self.SecondWordLabel setText:@""];
+        [self.ThirdWordLabel setText:@""];
+        [self.FourthWordLabel setText:@""];
+        [self.FifthWordLabel setText:@""];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+        return;
+    }
+    
     WordSetControl *wordPool = [[WordSetControl alloc] init];
     [wordPool PrepareForArray];
     
@@ -249,6 +227,7 @@
     for(int i=0;i<GenerateWordCount;i++){
         bool flag=true;
         do{
+            flag = true;
             NSString *oneWord = [wordPool OutputOneWord_afterPrepareForArray];
             [WordArray addObject:oneWord];
             for(int j=0;j<i;j++){

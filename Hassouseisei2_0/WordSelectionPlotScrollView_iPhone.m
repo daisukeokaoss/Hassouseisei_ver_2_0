@@ -41,6 +41,9 @@
 @property (nonatomic,strong) UISwitch *ElementaryWordSwitch;
 @property (nonatomic,strong) UILabel *ElementaryWordLabel;
 
+@property (nonatomic,strong) UISwitch *WorldHistoryWordSwitch;
+@property (nonatomic,strong) UILabel  *WorldHistoryWordLabel;
+
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
 @property (nonatomic,strong) UIButton *CopyRightButton;
@@ -109,16 +112,23 @@
     [self.ElementaryWordLabel setText:@"一般用語" ];
     [self.ElementaryWordLabel sizeToFit];
     
-    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 339, 68, 21)];
+    self.WorldHistoryWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 339, 68, 21)];
+    self.WorldHistoryWordSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(237, 339, 51, 31)];
+    [self.WorldHistoryWordLabel setText:@"世界史用語"];
+    [self.WorldHistoryWordLabel sizeToFit];
+    
+    
+    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 339+39, 68, 21)];
     
     [self.WordCountLabel setText:@"ワード数は0個です"];
     [self.WordCountLabel sizeToFit];
 
     //self.CopyRightButton = [[UIButton alloc]//initWithFrame:CGRectMake(36, 379, 100, 100)];
     self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [self.CopyRightButton setFrame:CGRectMake(36, 360, 50, 50)];
+    [self.CopyRightButton setFrame:CGRectMake(36, 360+39, 50, 50)];
     
     [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.CopyRightButton sizeToFit];
     
     
     
@@ -139,6 +149,8 @@
     [self addSubview:self.ElementaryWordSwitch];
     [self addSubview:self.PhysicalWordLabel];
     [self addSubview:self.physicalWordSwitch];
+    [self addSubview:self.WorldHistoryWordLabel];
+    [self addSubview:self.WorldHistoryWordSwitch];
     [self addSubview:self.WordCountLabel];
     [self addSubview:self.CopyRightButton];
     
@@ -149,6 +161,7 @@
     [self.OpticalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
     
 }
 
@@ -169,6 +182,7 @@
     setting.OpticalWordGenerate   = self.OpticalWordSwitch.on;
     setting.PhysicalWordGenerate  = self.physicalWordSwitch.on;
     setting.ElementaryWordGenerate = self.ElementaryWordSwitch.on;
+    setting.WorldHistoryWordGenerate = self.WorldHistoryWordSwitch.on;
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     
@@ -195,6 +209,7 @@
     [ud setBool:self.OpticalWordSwitch.on forKey:OpticalWordGenerateString];
     [ud setBool:self.physicalWordSwitch.on forKey:PhysicalWordGenerateString];
     [ud setBool:self.ElementaryWordSwitch.on forKey:ElementaryWordGenerateString];
+    [ud setBool:self.WorldHistoryWordSwitch.on forKey:WorldHistoryWordGenerateString];
     
     int index = [self.wordCountSegmentedControl selectedSegmentIndex];
     
@@ -227,6 +242,7 @@
     [defaults setObject:@(YES) forKey:OpticalWordGenerateString];
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
+    [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
     
@@ -238,6 +254,7 @@
      [self.OpticalWordSwitch     setOn:[ud boolForKey:OpticalWordGenerateString] animated:YES];
      [self.physicalWordSwitch    setOn:[ud boolForKey:PhysicalWordGenerateString] animated:YES];
      [self.ElementaryWordSwitch  setOn:[ud boolForKey:ElementaryWordGenerateString] animated:YES];
+    [self.WorldHistoryWordSwitch setOn:[ud boolForKey:WorldHistoryWordGenerateString] animated:YES];
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     

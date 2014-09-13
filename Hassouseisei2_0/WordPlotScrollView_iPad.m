@@ -119,7 +119,7 @@
     int QBFlatButton_XCoordinateOffset = Label_XCoodinateOffset;
     int QBFlatButton_YCoordinateOffset = (int)(ScrollView_height*(312.0/430.0));
     int QBFlatButton_Width             = ScrollView_width - Label_XCoodinateOffset*2;
-    int QBFlatButton_Height            = (int)(ScrollView_height *(90.0/430));
+    int QBFlatButton_Height            = (int)(ScrollView_height *(85.0/430));
     
     self.genereteButton = [[QBFlatButton alloc] initWithFrame:CGRectMake(QBFlatButton_XCoordinateOffset,QBFlatButton_YCoordinateOffset,
                                                                          QBFlatButton_Width , QBFlatButton_Height)];
@@ -166,8 +166,20 @@
 
 -(void)generateButton_touchDown
 {
+    if([WordSetControl CountWordPool] == 0){
+        [self.FirstWordLabel setText:@""];
+        [self.SecondWordLabel setText:@""];
+        [self.ThirdWordLabel setText:@""];
+        [self.FourthWordLabel setText:@""];
+        [self.FifthWordLabel setText:@""];
+        [self.SixthWordLabel setText:@""];
+        [self.SeventhWordLabel setText:@""];
+        return;
+    }
+    
     WordSetControl *wordPool = [[WordSetControl alloc] init];
     [wordPool PrepareForArray];
+    
     
     BrainStormingAppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     GlobalSetting *setting = appdelegate.globalSetting;
@@ -178,6 +190,7 @@
     for(int i=0;i<GenerateWordCount;i++){
         bool flag=true;
         do{
+            flag = true;
             NSString *oneWord = [wordPool OutputOneWord_afterPrepareForArray];
             [WordArray addObject:oneWord];
             for(int j=0;j<i;j++){
