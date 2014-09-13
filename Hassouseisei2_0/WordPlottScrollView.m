@@ -229,6 +229,9 @@
         do{
             flag = true;
             NSString *oneWord = [wordPool OutputOneWord_afterPrepareForArray];
+            if([oneWord isEqualToString:@""] ){
+                return;
+            }
             [WordArray addObject:oneWord];
             for(int j=0;j<i;j++){
                 if([WordArray[j] isEqualToString:oneWord]){
