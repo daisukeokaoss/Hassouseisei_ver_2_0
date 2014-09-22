@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
+		70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565819D05C4A0037A5DC /* CoreGraphics.framework */; };
+		70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565419D05C250037A5DC /* Foundation.framework */; };
+		70B1565F19D05D850037A5DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565619D05C2E0037A5DC /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		70DC3BDF19C40203006CFC5E /* WorldHistoryWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */; };
 		C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */; };
 		C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E119A275DE002B9B68 /* BiologicalWordStore.m */; };
@@ -22,9 +25,6 @@
 		C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */; };
 		C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360319A4D155002B9B68 /* GlobalSetting.m */; };
 		C977360819A610CC002B9B68 /* WordSetControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C977360719A610CC002B9B68 /* WordSetControl.m */; };
-		C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
-		C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */; };
-		C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
 		C9CAB41319914B730004B6D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB41119914B730004B6D6 /* InfoPlist.strings */; };
 		C9CAB41519914B730004B6D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB41419914B730004B6D6 /* main.m */; };
 		C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */; };
@@ -33,9 +33,6 @@
 		C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB42119914B730004B6D6 /* BrainStormingFirstViewController.m */; };
 		C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB42419914B730004B6D6 /* BrainStormingSecondViewController.m */; };
 		C9CAB42719914B730004B6D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB42619914B730004B6D6 /* Images.xcassets */; };
-		C9CAB42E19914B730004B6D6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB42D19914B730004B6D6 /* XCTest.framework */; };
-		C9CAB42F19914B730004B6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40819914B730004B6D6 /* Foundation.framework */; };
-		C9CAB43019914B730004B6D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CAB40C19914B730004B6D6 /* UIKit.framework */; };
 		C9CAB43819914B730004B6D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB43619914B730004B6D6 /* InfoPlist.strings */; };
 		C9CAB43A19914B730004B6D6 /* Hassouseisei2_0Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAB43919914B730004B6D6 /* Hassouseisei2_0Tests.m */; };
 		C9CAB44719914D1B0004B6D6 /* 09-chat-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAB44319914D1B0004B6D6 /* 09-chat-2.png */; };
@@ -55,6 +52,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		70B1566019D0610A0037A5DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9CAB3FD19914B730004B6D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9CAB40419914B730004B6D6;
+			remoteInfo = Hassouseisei2_0;
+		};
 		C9CAB43119914B730004B6D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9CAB3FD19914B730004B6D6 /* Project object */;
@@ -67,6 +71,9 @@
 /* Begin PBXFileReference section */
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
+		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		70B1565619D05C2E0037A5DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		70B1565819D05C4A0037A5DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		70DC3BDD19C40203006CFC5E /* WorldHistoryWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldHistoryWordStore.h; sourceTree = "<group>"; };
 		70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldHistoryWordStore.m; sourceTree = "<group>"; };
 		C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPlotScrollView_iPad.h; sourceTree = "<group>"; };
@@ -96,9 +103,6 @@
 		C977360619A610CC002B9B68 /* WordSetControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordSetControl.h; sourceTree = "<group>"; };
 		C977360719A610CC002B9B68 /* WordSetControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordSetControl.m; sourceTree = "<group>"; };
 		C9CAB40519914B730004B6D6 /* 発想生成.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "発想生成.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9CAB40819914B730004B6D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C9CAB40C19914B730004B6D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9CAB41019914B730004B6D6 /* Hassouseisei2_0-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hassouseisei2_0-Info.plist"; sourceTree = "<group>"; };
 		C9CAB41219914B730004B6D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9CAB41419914B730004B6D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,7 +117,6 @@
 		C9CAB42419914B730004B6D6 /* BrainStormingSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainStormingSecondViewController.m; sourceTree = "<group>"; };
 		C9CAB42619914B730004B6D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C9CAB42C19914B730004B6D6 /* Hassouseisei2_0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hassouseisei2_0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9CAB42D19914B730004B6D6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C9CAB43519914B730004B6D6 /* Hassouseisei2_0Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hassouseisei2_0Tests-Info.plist"; sourceTree = "<group>"; };
 		C9CAB43719914B730004B6D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9CAB43919914B730004B6D6 /* Hassouseisei2_0Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hassouseisei2_0Tests.m; sourceTree = "<group>"; };
@@ -144,9 +147,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CAB40B19914B730004B6D6 /* CoreGraphics.framework in Frameworks */,
-				C9CAB40D19914B730004B6D6 /* UIKit.framework in Frameworks */,
-				C9CAB40919914B730004B6D6 /* Foundation.framework in Frameworks */,
+				70B1565F19D05D850037A5DC /* UIKit.framework in Frameworks */,
+				70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */,
+				70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CAB42E19914B730004B6D6 /* XCTest.framework in Frameworks */,
-				C9CAB43019914B730004B6D6 /* UIKit.framework in Frameworks */,
-				C9CAB42F19914B730004B6D6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,10 +210,9 @@
 		C9CAB40719914B730004B6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9CAB40819914B730004B6D6 /* Foundation.framework */,
-				C9CAB40A19914B730004B6D6 /* CoreGraphics.framework */,
-				C9CAB40C19914B730004B6D6 /* UIKit.framework */,
-				C9CAB42D19914B730004B6D6 /* XCTest.framework */,
+				70B1565819D05C4A0037A5DC /* CoreGraphics.framework */,
+				70B1565619D05C2E0037A5DC /* UIKit.framework */,
+				70B1565419D05C250037A5DC /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -329,6 +328,7 @@
 			);
 			dependencies = (
 				C9CAB43219914B730004B6D6 /* PBXTargetDependency */,
+				70B1566119D0610A0037A5DC /* PBXTargetDependency */,
 			);
 			name = Hassouseisei2_0Tests;
 			productName = Hassouseisei2_0Tests;
@@ -446,6 +446,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		70B1566119D0610A0037A5DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9CAB40419914B730004B6D6 /* Hassouseisei2_0 */;
+			targetProxy = 70B1566019D0610A0037A5DC /* PBXContainerItemProxy */;
+		};
 		C9CAB43219914B730004B6D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9CAB40419914B730004B6D6 /* Hassouseisei2_0 */;
@@ -521,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -572,6 +577,7 @@
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
 				WRAPPER_EXTENSION = app;
@@ -589,6 +595,7 @@
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
 				WRAPPER_EXTENSION = app;
@@ -598,7 +605,7 @@
 		C9CAB44119914B730004B6D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hassouseisei2_0.app/Hassouseisei2_0";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -612,7 +619,7 @@
 				);
 				INFOPLIST_FILE = "Hassouseisei2_0Tests/Hassouseisei2_0Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/発想生成.app/発想生成";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -620,7 +627,7 @@
 		C9CAB44219914B730004B6D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hassouseisei2_0.app/Hassouseisei2_0";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -630,7 +637,7 @@
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0Tests/Hassouseisei2_0Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/発想生成.app/発想生成";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

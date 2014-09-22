@@ -436,7 +436,7 @@
 
 -(void)setUpViewDidLoad_iPadRetina
 {
-    if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationPortrait){
+   /* if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationPortrait){
         [self setUpViewDidLoad_iPadRetina_UIInterfaceOrientationPortorait];
     }else if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown){
         [self setUpViewDidLoad_iPadRetina_UIInterfaceOrientationUpsideDown];
@@ -444,7 +444,7 @@
         [self setUpViewDidLoad_iPadRetina_LandscapeLeft];
     }else if(self.window.rootViewController.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
         [self setUpViewDidLoad_iPadRetina_LandscapeRight];
-    }
+    }*/
 }
 
 -(void)setUpViewDidLoad_iPhone4_iPhone4S

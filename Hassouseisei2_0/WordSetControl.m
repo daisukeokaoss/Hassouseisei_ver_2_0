@@ -17,8 +17,9 @@
 #import "OpticalWordStore.h"
 #import "PhysicalWordStore.h"
 #import "WorldHistoryWordStore.h"
-#import "BrainStormingAppDelegate.h"
 #import "MedicalWordJp_MachineCollect.h"
+#import "BrainStormingAppDelegate.h"
+
 
 @interface WordSetControl()
 
