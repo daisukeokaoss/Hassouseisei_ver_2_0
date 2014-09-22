@@ -291,6 +291,8 @@
     [self addSubview:self.physicalWordSwitch];
     [self addSubview:self.WorldHistoryWordLabel];
     [self addSubview:self.WorldHistoryWordSwitch];
+    [self addSubview:self.MedicalWordLabel];
+    [self addSubview:self.MedicalWordSwitch];
     [self addSubview:self.WordCountLabel];
     [self addSubview:self.CopyRightButton];
     
@@ -302,6 +304,7 @@
     [self.ElementaryWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
+    [self.MedicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
 }
 
