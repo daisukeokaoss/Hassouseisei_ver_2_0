@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
 		70DC3BDF19C40203006CFC5E /* WorldHistoryWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */; };
 		C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735D119A243F0002B9B68 /* WordPlotScrollView_iPad.m */; };
 		C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C97735E119A275DE002B9B68 /* BiologicalWordStore.m */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
+		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70DC3BDD19C40203006CFC5E /* WorldHistoryWordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldHistoryWordStore.h; sourceTree = "<group>"; };
 		70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldHistoryWordStore.m; sourceTree = "<group>"; };
 		C97735D019A243F0002B9B68 /* WordPlotScrollView_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordPlotScrollView_iPad.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 		C97735E619A27609002B9B68 /* Japanese */ = {
 			isa = PBXGroup;
 			children = (
+				70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */,
+				70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */,
 				70DC3BDD19C40203006CFC5E /* WorldHistoryWordStore.h */,
 				70DC3BDE19C40203006CFC5E /* WorldHistoryWordStore.m */,
 				C97735E019A275DE002B9B68 /* BiologicalWordStore.h */,
@@ -412,6 +417,7 @@
 				C9D8D5BA19B4A2EE007887C8 /* CopyrightViewController.m in Sources */,
 				C97735F819A3A230002B9B68 /* OpticalWordStore.m in Sources */,
 				C977360819A610CC002B9B68 /* WordSetControl.m in Sources */,
+				70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */,
 				C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */,
 				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
@@ -565,6 +571,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
 				WRAPPER_EXTENSION = app;
@@ -581,6 +588,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
 				INFOPLIST_FILE = "Hassouseisei2_0/Hassouseisei2_0-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "発想生成";
 				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
 				WRAPPER_EXTENSION = app;

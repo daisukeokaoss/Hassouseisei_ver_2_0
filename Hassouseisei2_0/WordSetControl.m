@@ -18,6 +18,7 @@
 #import "PhysicalWordStore.h"
 #import "WorldHistoryWordStore.h"
 #import "BrainStormingAppDelegate.h"
+#import "MedicalWordJp_MachineCollect.h"
 
 @interface WordSetControl()
 
@@ -58,9 +59,11 @@
     if(setting.WorldHistoryWordGenerate){
         [wordPool addObjectsFromArray:[WorldHistoryWordStore GenerateWordArray]];
     }
+    if(setting.MedicalWordGenerate){
+        [wordPool addObjectsFromArray:[MedicalWordJp_MachineCollect GenerateWordArray]];
+    }
     
-    
-    return [wordPool count];
+    return (int)[wordPool count];
 }
 
 -(void)PrepareForArray
@@ -93,6 +96,9 @@
     }
     if(setting.WorldHistoryWordGenerate){
         [self.WordPool_Global addObjectsFromArray:[WorldHistoryWordStore GenerateWordArray]];
+    }
+    if(setting.MedicalWordGenerate){
+        [self.WordPool_Global addObjectsFromArray:[MedicalWordJp_MachineCollect GenerateWordArray]];
     }
 }
 

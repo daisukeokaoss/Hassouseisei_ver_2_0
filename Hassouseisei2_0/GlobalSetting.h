@@ -23,6 +23,7 @@ extern NSString * const  OpticalWordGenerateString;
 extern NSString * const  PhysicalWordGenerateString;
 extern NSString * const  ElementaryWordGenerateString;
 extern NSString * const  WorldHistoryWordGenerateString;
+extern NSString * const  MedicalWordGenerateString;
 
 extern NSString * const  NumberOfGenerateWordString;
 
@@ -38,6 +39,7 @@ extern NSString * const  NumberOfGenerateWordString;
 @property (nonatomic) bool PhysicalWordGenerate;
 @property (nonatomic) bool ElementaryWordGenerate;
 @property (nonatomic) bool WorldHistoryWordGenerate;
+@property (nonatomic) bool MedicalWordGenerate;
 
 
 @property (nonatomic) int NumberOfGenerateWord;

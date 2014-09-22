@@ -309,6 +309,9 @@
     if([self.FourthWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
         MaxWidth = [self.FourthWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
     }
+    if([self.FifthWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
+        MaxWidth = [self.FourthWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
+    }
     if([self.SixthWordLabel sizeThatFits:CGSizeMake(1000,500)].width > MaxWidth){
         MaxWidth = [self.SixthWordLabel sizeThatFits:CGSizeMake(1000,500)].width;
     }

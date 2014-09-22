@@ -17,6 +17,7 @@ NSString * const  OpticalWordGenerateString = @"OpticalWordGenerateString";
 NSString * const  PhysicalWordGenerateString =@"PhysicalWordGenerateString";
 NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString";
 NSString * const  WorldHistoryWordGenerateString = @"WorldHistoryWordGenerateString";
+NSString * const  MedicalWordGenerateString = @"MedicalWordGenerateString";
 
 NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
 
@@ -37,7 +38,10 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [defaults setObject:@(YES) forKey:PhysicalWordGenerateString];
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
     [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
+    [defaults setObject:@(YES) forKey:MedicalWordGenerateString];
+    
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
+
     [ud registerDefaults:defaults];
     
     
@@ -51,8 +55,9 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     self.PhysicalWordGenerate     = [ud boolForKey:PhysicalWordGenerateString];
     self.ElementaryWordGenerate   = [ud boolForKey:ElementaryWordGenerateString];
     self.WorldHistoryWordGenerate = [ud boolForKey:WorldHistoryWordGenerateString];
+    self.MedicalWordGenerate      = [ud boolForKey:MedicalWordGenerateString];
     
-    self.NumberOfGenerateWord     = [ud integerForKey:NumberOfGenerateWordString];
+    self.NumberOfGenerateWord     = (int)[ud integerForKey:NumberOfGenerateWordString];
     
     
 }
@@ -68,6 +73,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [ud setBool:self.PhysicalWordGenerate forKey:PhysicalWordGenerateString];
     [ud setBool:self.ElementaryWordGenerate forKey:ElementaryWordGenerateString];
     [ud setBool:self.WorldHistoryWordGenerate forKey:WorldHistoryWordGenerateString];
+    [ud setBool:self.MedicalWordGenerate forKey:MedicalWordGenerateString];
     
     [ud setInteger:self.NumberOfGenerateWord forKey:NumberOfGenerateWordString];
     
