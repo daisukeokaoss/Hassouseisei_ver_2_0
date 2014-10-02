@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7037B46919DCED7500364C4E /* WordTouchSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */; };
 		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
 		70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565819D05C4A0037A5DC /* CoreGraphics.framework */; };
 		70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565419D05C250037A5DC /* Foundation.framework */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7037B46719DCED7500364C4E /* WordTouchSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTouchSelectionViewController.h; sourceTree = "<group>"; };
+		7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTouchSelectionViewController.m; sourceTree = "<group>"; };
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -228,6 +231,8 @@
 				C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */,
 				C9CAB41A19914B730004B6D6 /* Main_iPhone.storyboard */,
 				C9CAB41D19914B730004B6D6 /* Main_iPad.storyboard */,
+				7037B46719DCED7500364C4E /* WordTouchSelectionViewController.h */,
+				7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */,
 				C97735FF19A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.h */,
 				C977360019A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m */,
 				C97735FC19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.h */,
@@ -426,6 +431,7 @@
 				C9CAB41919914B730004B6D6 /* BrainStormingAppDelegate.m in Sources */,
 				C97735D219A243F0002B9B68 /* WordPlotScrollView_iPad.m in Sources */,
 				C9D8D5B719B4A2DE007887C8 /* CopyrightView.m in Sources */,
+				7037B46919DCED7500364C4E /* WordTouchSelectionViewController.m in Sources */,
 				C97735E219A275DE002B9B68 /* BiologicalWordStore.m in Sources */,
 				C977360419A4D155002B9B68 /* GlobalSetting.m in Sources */,
 				C9CAB41519914B730004B6D6 /* main.m in Sources */,
