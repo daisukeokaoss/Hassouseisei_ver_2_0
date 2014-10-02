@@ -43,6 +43,10 @@
     [self.GoogleSearchUIButton setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:self.GoogleSearchUIButton];
     
+    self.TagThisWord = [[UIButton alloc] initWithFrame:CGRectMake(16, 96, 280, 20)];
+    [self.TagThisWord setTitle:@"この単語にタグをつける" forState:UIControlStateNormal];
+    [self.TagThisWord 
+    
     
     
     
