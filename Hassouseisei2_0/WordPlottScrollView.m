@@ -199,7 +199,9 @@
     ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     //アニメーションを有効にしてビューを表示します。
     [self.mainViewController presentViewController: ViewController animated:YES completion: nil];*/
+    
     WordTouchSelectionViewController *ViewController = [[WordTouchSelectionViewController alloc] init];
+   // ViewController.mainViewController = self.mainViewController;
     ViewController.TappedWord = sender.text;
     ViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self.mainViewController presentViewController: ViewController animated:YES completion: nil];

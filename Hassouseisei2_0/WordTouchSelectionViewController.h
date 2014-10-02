@@ -12,4 +12,6 @@
 
 @property (nonatomic,strong) NSString *TappedWord;
 
+//@property (strong,nonatomic) UIViewController *mainViewController;
+
 @end

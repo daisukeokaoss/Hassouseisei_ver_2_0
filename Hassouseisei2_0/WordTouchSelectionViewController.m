@@ -7,6 +7,7 @@
 //
 
 #import "WordTouchSelectionViewController.h"
+#import "SearchViewController.h"
 
 //以下、色定義
 #define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
@@ -37,14 +38,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //[self BuildInterface];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
     [self BuildInterface];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -63,7 +59,7 @@
     self.GoogleSearchUIButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50, 280, 20)];
     [self.GoogleSearchUIButton setTitle:@"Google Search" forState:UIControlStateNormal];
     [self.GoogleSearchUIButton setBackgroundColor:myColorSteelblue];
-    [self.view addSubview:self.GoogleSearchUIButton];
+    
     
     self.TagThisWordA = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*2+offset, 280, 20)];
     [self.TagThisWordA setTitle:@"この単語をお気に入りAに入れる" forState:UIControlStateNormal];
@@ -95,7 +91,60 @@
     [self.CloseButton setBackgroundColor:[UIColor cyanColor]];
     [self.view addSubview:self.CloseButton];
     
+    self.GoogleSearchUIButton.tag = 1;
     
+    [self.GoogleSearchUIButton addTarget:self action:@selector(GoogleSearchButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagThisWordA addTarget:self action:@selector(TagToWordsetA) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagThisWordB addTarget:self action:@selector(TagToWordsetB) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagThisWordC addTarget:self action:@selector(TagToWordsetC) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagThisWordD addTarget:self action:@selector(TagToWordsetD) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagThisWordE addTarget:self action:@selector(TagToWordSetE) forControlEvents:UIControlEventTouchUpInside];
+    [self.CloseButton addTarget:self action:@selector(ReturnToMain) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.GoogleSearchUIButton];
+    
+    
+    
+}
+
+-(void)GoogleSearchButton
+{
+    
+    SearchViewController* ViewController = [[SearchViewController alloc] init];
+    ViewController.SearchString =  self.TappedWord;
+    ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    //アニメーションを有効にしてビューを表示します。
+    [self presentViewController: ViewController animated:YES completion: nil];
+    
+}
+
+-(void)TagToWordsetA
+{
+    
+}
+
+-(void)TagToWordsetB
+{
+    
+}
+
+-(void)TagToWordsetC
+{
+    
+}
+
+-(void)TagToWordsetD
+{
+    
+}
+
+-(void)TagToWordSetE
+{
+    
+}
+
+-(void)ReturnToMain
+{
+     [self dismissViewControllerAnimated:YES completion:nil];   
 }
 
 /*
