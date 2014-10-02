@@ -15,6 +15,8 @@
 
 #include "CopyrightViewController.h"
 
+#define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
+
 
 @interface WordSelectionPlotScrollView_iPhone()
 
@@ -50,6 +52,9 @@
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
 @property (nonatomic,strong) UIButton *CopyRightButton;
+
+
+@property (nonatomic,strong) UIButton *TagWordShow;
 
 @end
 
@@ -138,6 +143,12 @@
     [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.CopyRightButton sizeToFit];
     
+    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(16, 360+39*3, 280, 20)];
+    [self.TagWordShow addTarget:self action:@selector(OpenTaggedWord) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagWordShow setTitle:@"タグをつけられたワード" forState:UIControlStateNormal];
+    [self.TagWordShow setBackgroundColor:myColorSteelblue];
+    [self addSubview:self.TagWordShow];
+    
     
     
     
@@ -174,6 +185,11 @@
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
     [self.MedicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    
+}
+     
+-(void)OpenTaggedWord
+{
     
 }
 

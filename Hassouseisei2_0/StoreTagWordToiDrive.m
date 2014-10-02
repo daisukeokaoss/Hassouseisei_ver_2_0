@@ -11,10 +11,15 @@
 @interface StoreTagWordToiDrive()
 @property (nonatomic,strong) NSMutableArray *TagWordsA;
 @property (nonatomic,strong) NSMutableArray *TagWordsB;
-//ここ、作りかけ
+@property (nonatomic,strong) NSMutableArray *TagWordsC;
+@property (nonatomic,strong) NSMutableArray *TagWordsD;
+@property (nonatomic,strong) NSMutableArray *TagWordsE;
 
 @end
 
 @implementation StoreTagWordToiDrive
+
+
+
 
 @end
