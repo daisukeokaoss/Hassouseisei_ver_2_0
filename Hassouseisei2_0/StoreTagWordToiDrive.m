@@ -19,11 +19,23 @@
 {
     self =[super init];
     if(self){
-        self.TagWordsA = [[NSMutableArray alloc] init];
-        self.TagWordsB = [[NSMutableArray alloc] init];
-        self.TagWordsC = [[NSMutableArray alloc] init];
-        self.TagWordsD = [[NSMutableArray alloc] init];
-        self.TagWordsE = [[NSMutableArray alloc] init];
+
+        [self RestoreAlliDriveToArray];
+        if(self.TagWordsA==nil){
+            self.TagWordsA = [[NSMutableArray alloc] init];
+        }
+        if(self.TagWordsB ==nil){
+            self.TagWordsB = [[NSMutableArray alloc] init];
+        }
+        if(self.TagWordsC ==Nil){
+            self.TagWordsC =[[NSMutableArray alloc] init];
+        }
+        if(self.TagWordsD ==nil){
+            self.TagWordsD =[[NSMutableArray alloc] init];
+        }
+        if(self.TagWordsE ==nil){
+            self.TagWordsE =[[NSMutableArray alloc] init];
+        }
     }
     return self;
 }
@@ -54,22 +66,27 @@
 -(void)SaveToTagA:(NSString *)string
 {
     [self.TagWordsA addObject:string];
+    [self StoreAllArrayToiDrive];
 }
 -(void)SaveToTagB:(NSString *)string
 {
     [self.TagWordsB addObject:string];
+    [self StoreAllArrayToiDrive];
 }
 -(void)SaveToTagC:(NSString *)string
 {
     [self.TagWordsC addObject:string];
+    [self StoreAllArrayToiDrive];
 }
 -(void)SaveToTagD:(NSString *)string
 {
     [self.TagWordsD addObject:string];
+    [self StoreAllArrayToiDrive];
 }
 -(void)SaveToTagE:(NSString *)string
 {
     [self.TagWordsE addObject:string];
+    [self StoreAllArrayToiDrive];
 }
 
 @end
