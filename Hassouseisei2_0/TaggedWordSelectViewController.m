@@ -8,7 +8,23 @@
 
 #import "TaggedWordSelectViewController.h"
 
+
+//以下、色定義
+#define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
+#define myColorDarkgreen [UIColor colorWithRed: (0.0)/255.0 green: (100.0)/255.0 blue: (0.0)/255.0 alpha: 1.0]
+#define myColorMediumpurple [UIColor colorWithRed: (147.0)/255.0 green: (112.0)/255.0 blue: (219.0)/255.0 alpha: 1.0]
+#define myColorMediumvioletred [UIColor colorWithRed: (199.0)/255.0 green: (21.0)/255.0 blue: (133.0)/255.0 alpha: 1.0]
+
 @interface TaggedWordSelectViewController ()
+
+@property (nonatomic,strong)UIButton *ShowTagHistoryOfA;
+@property (nonatomic,strong)UIButton *ShowTagHistoryOfB;
+@property (nonatomic,strong)UIButton *showTagHistoryOfC;
+@property (nonatomic,strong)UIButton *showTagHistoryOfD;
+@property (nonatomic,strong)UIButton *showTagHistoryOfE;
+@property (nonatomic,strong)UIButton *CloseButton;
+
+
 
 @end
 
@@ -17,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self BuildInterface];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,63 +44,77 @@
 -(void)BuildInterface
 {
  
-    /*
-    self.view.backgroundColor =[UIColor whiteColor];
+
     
     
-    self.TappedWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(16, 30, 280, 20)];
-    [self.TappedWordLabel setText:self.TappedWord];
-    [self.view addSubview:self.TappedWordLabel];
-    int offset = 50;
-    self.GoogleSearchUIButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50, 280, 20)];
-    [self.GoogleSearchUIButton setTitle:@"Google Search" forState:UIControlStateNormal];
-    [self.GoogleSearchUIButton setBackgroundColor:myColorSteelblue];
+    
+
+
     
     
-    self.TagThisWordA = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*2+offset, 280, 20)];
-    [self.TagThisWordA setTitle:@"この単語をお気に入りAに入れる" forState:UIControlStateNormal];
-    [self.TagThisWordA setBackgroundColor:myColorDarkgreen];
-    [self.view addSubview:self.TagThisWordA];
+    self.ShowTagHistoryOfA = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50, 280, 20)];
+    [self.ShowTagHistoryOfA setTitle:@"お気に入りA" forState:UIControlStateNormal];
+    [self.ShowTagHistoryOfA setBackgroundColor:myColorDarkgreen];
+    [self.view addSubview:self.ShowTagHistoryOfA];
     
-    self.TagThisWordB = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*3+offset, 280, 20)];
-    [self.TagThisWordB setTitle:@"この単語をお気に入りBに入れる" forState:UIControlStateNormal];
-    [self.TagThisWordB setBackgroundColor:myColorMediumpurple];
-    [self.view addSubview:self.TagThisWordB];
+    self.ShowTagHistoryOfB = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*2, 280, 20)];
+    [self.ShowTagHistoryOfB setTitle:@"お気に入りB" forState:UIControlStateNormal];
+    [self.ShowTagHistoryOfB setBackgroundColor:myColorMediumpurple];
+    [self.view addSubview:self.ShowTagHistoryOfB];
     
-    self.TagThisWordC = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*4+offset, 280, 20)];
-    [self.TagThisWordC setTitle:@"この単語をお気に入りCに入れる" forState:UIControlStateNormal];
-    [self.TagThisWordC setBackgroundColor:[UIColor orangeColor]];
-    [self.view addSubview:self.TagThisWordC];
+    self.showTagHistoryOfC = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*3, 280, 20)];
+    [self.showTagHistoryOfC setTitle:@"お気に入りC" forState:UIControlStateNormal];
+    [self.showTagHistoryOfC setBackgroundColor:[UIColor orangeColor]];
+    [self.view addSubview:self.showTagHistoryOfC];
     
-    self.TagThisWordD = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*5+offset, 280, 20)];
-    [self.TagThisWordD setTitle:@"この単語をお気に入りDに入れる" forState:UIControlStateNormal];
-    [self.TagThisWordD setBackgroundColor:myColorMediumvioletred];
-    [self.view addSubview:self.TagThisWordD];
+    self.showTagHistoryOfD = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*4, 280, 20)];
+    [self.showTagHistoryOfD setTitle:@"お気に入りD" forState:UIControlStateNormal];
+    [self.showTagHistoryOfD setBackgroundColor:myColorMediumvioletred];
+    [self.view addSubview:self.showTagHistoryOfD];
     
-    self.TagThisWordE = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*6+offset, 280, 20)];
-    [self.TagThisWordE setTitle:@"この単語をお気に入りEに入れる" forState:UIControlStateNormal];
-    [self.TagThisWordE setBackgroundColor:[UIColor magentaColor]];
-    [self.view addSubview:self.TagThisWordE];
+    self.showTagHistoryOfE = [[UIButton alloc] initWithFrame:CGRectMake(16,30+50*5, 280, 20)];
+    [self.showTagHistoryOfE setTitle:@"お気に入りE" forState:UIControlStateNormal];
+    [self.showTagHistoryOfE setBackgroundColor:[UIColor magentaColor]];
+    [self.view addSubview:self.showTagHistoryOfE];
     
-    self.CloseButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*6+offset*2, 280, 20)];
+    self.CloseButton = [[UIButton alloc] initWithFrame:CGRectMake(16, 30+50*6, 280, 20)];
     [self.CloseButton setTitle:@"戻る" forState:UIControlStateNormal];
     [self.CloseButton setBackgroundColor:[UIColor cyanColor]];
     [self.view addSubview:self.CloseButton];
     
-    self.GoogleSearchUIButton.tag = 1;
-    
-    [self.GoogleSearchUIButton addTarget:self action:@selector(GoogleSearchButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagThisWordA addTarget:self action:@selector(TagToWordsetA) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagThisWordB addTarget:self action:@selector(TagToWordsetB) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagThisWordC addTarget:self action:@selector(TagToWordsetC) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagThisWordD addTarget:self action:@selector(TagToWordsetD) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagThisWordE addTarget:self action:@selector(TagToWordSetE) forControlEvents:UIControlEventTouchUpInside];
+    [self.ShowTagHistoryOfA addTarget:self action:@selector(ShowTagWordA) forControlEvents:UIControlEventTouchUpInside];
+    [self.ShowTagHistoryOfB addTarget:self action:@selector(ShowTagWordB) forControlEvents:UIControlEventTouchUpInside];
+    [self.showTagHistoryOfC addTarget:self action:@selector(ShowTagWordC) forControlEvents:UIControlEventTouchUpInside];
+    [self.showTagHistoryOfD addTarget:self action:@selector(ShowTagWordD) forControlEvents:UIControlEventTouchUpInside];
+    [self.showTagHistoryOfE addTarget:self action:@selector(ShowTagWordE) forControlEvents:UIControlEventTouchUpInside];
     [self.CloseButton addTarget:self action:@selector(ReturnToMain) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.GoogleSearchUIButton];
-        
-    */
-        
     
+    
+}
+
+-(void)ShowTagWordA
+{
+    
+}
+-(void)ShowTagWordB
+{
+    
+}
+-(void)ShowTagWordC
+{
+    
+}
+-(void)ShowTagWordD
+{
+    
+}
+-(void)ShowTagWordE
+{
+    
+}
+-(void)ReturnToMain
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
