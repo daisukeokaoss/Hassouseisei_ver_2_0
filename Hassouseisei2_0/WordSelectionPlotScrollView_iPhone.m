@@ -14,6 +14,8 @@
 #import "WordSetControl.h"
 
 #include "CopyrightViewController.h"
+#include "TaggedWordSelectViewController.h"
+
 
 #define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
 
@@ -145,7 +147,7 @@
     
     self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(16, 360+39*3, 280, 20)];
     [self.TagWordShow addTarget:self action:@selector(OpenTaggedWord) forControlEvents:UIControlEventTouchUpInside];
-    [self.TagWordShow setTitle:@"タグをつけられたワード" forState:UIControlStateNormal];
+    [self.TagWordShow setTitle:@"お気に入りに入れられたワード" forState:UIControlStateNormal];
     [self.TagWordShow setBackgroundColor:myColorSteelblue];
     [self addSubview:self.TagWordShow];
     
@@ -190,6 +192,12 @@
      
 -(void)OpenTaggedWord
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"NewVC"];
+    //呼び出し！
+    [self.mainViewController presentViewController:vc animated:YES completion:nil];
     
 }
 

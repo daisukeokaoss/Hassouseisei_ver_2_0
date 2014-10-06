@@ -45,6 +45,7 @@
         [self.myScrollView UI_FromNSUserDefaults];
     
     [self.myScrollView WordPoolChanged];
+    self.myScrollView.mainViewController = self;
     
 }
 
