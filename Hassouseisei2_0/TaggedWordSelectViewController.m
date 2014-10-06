@@ -8,6 +8,9 @@
 
 #import "TaggedWordSelectViewController.h"
 
+//ユーザーインポート
+#import "TagPlotTableViewController.h"
+
 
 //以下、色定義
 #define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
@@ -94,22 +97,52 @@
 
 -(void)ShowTagWordA
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
+    //呼び出し！
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 -(void)ShowTagWordB
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
+    //呼び出し！
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 -(void)ShowTagWordC
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
+    //呼び出し！
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 -(void)ShowTagWordD
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
+    //呼び出し！
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 -(void)ShowTagWordE
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
+    //呼び出し！
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 -(void)ReturnToMain

@@ -10,6 +10,8 @@
 		7037B46919DCED7500364C4E /* WordTouchSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */; };
 		7037B46C19DD228200364C4E /* StoreTagWordToiDrive.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46B19DD228200364C4E /* StoreTagWordToiDrive.m */; };
 		7037B46F19E2BDF900364C4E /* TaggedWordSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46E19E2BDF900364C4E /* TaggedWordSelectViewController.m */; };
+		7037B47219E2CC9500364C4E /* TagPlotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */; };
+		7037B47519E2CE3B00364C4E /* TaggedWordPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */; };
 		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
 		70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565819D05C4A0037A5DC /* CoreGraphics.framework */; };
 		70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565419D05C250037A5DC /* Foundation.framework */; };
@@ -78,6 +80,10 @@
 		7037B46B19DD228200364C4E /* StoreTagWordToiDrive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTagWordToiDrive.m; sourceTree = "<group>"; };
 		7037B46D19E2BDF900364C4E /* TaggedWordSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaggedWordSelectViewController.h; sourceTree = "<group>"; };
 		7037B46E19E2BDF900364C4E /* TaggedWordSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaggedWordSelectViewController.m; sourceTree = "<group>"; };
+		7037B47019E2CC9400364C4E /* TagPlotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPlotTableViewController.h; sourceTree = "<group>"; };
+		7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPlotTableViewController.m; sourceTree = "<group>"; };
+		7037B47319E2CE3B00364C4E /* TaggedWordPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaggedWordPlotViewController.h; sourceTree = "<group>"; };
+		7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaggedWordPlotViewController.m; sourceTree = "<group>"; };
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -237,6 +243,10 @@
 				C9CAB41819914B730004B6D6 /* BrainStormingAppDelegate.m */,
 				C9CAB41A19914B730004B6D6 /* Main_iPhone.storyboard */,
 				C9CAB41D19914B730004B6D6 /* Main_iPad.storyboard */,
+				7037B47319E2CE3B00364C4E /* TaggedWordPlotViewController.h */,
+				7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */,
+				7037B47019E2CC9400364C4E /* TagPlotTableViewController.h */,
+				7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */,
 				7037B46A19DD228200364C4E /* StoreTagWordToiDrive.h */,
 				7037B46B19DD228200364C4E /* StoreTagWordToiDrive.m */,
 				7037B46D19E2BDF900364C4E /* TaggedWordSelectViewController.h */,
@@ -435,7 +445,9 @@
 				70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */,
 				C977360119A4C8C5002B9B68 /* WordSelectionPlotViewController_iPad.m in Sources */,
 				7037B46C19DD228200364C4E /* StoreTagWordToiDrive.m in Sources */,
+				7037B47219E2CC9500364C4E /* TagPlotTableViewController.m in Sources */,
 				C9EEA0AF19966BBD00389853 /* BrainStormingFirstViewController_iPad.m in Sources */,
+				7037B47519E2CE3B00364C4E /* TaggedWordPlotViewController.m in Sources */,
 				C9CAB44D1991521B0004B6D6 /* QBFlatButton.m in Sources */,
 				C9CAB42219914B730004B6D6 /* BrainStormingFirstViewController.m in Sources */,
 				7037B46F19E2BDF900364C4E /* TaggedWordSelectViewController.m in Sources */,

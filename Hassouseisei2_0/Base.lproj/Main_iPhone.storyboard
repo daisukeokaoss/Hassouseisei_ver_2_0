@@ -28,6 +28,47 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
+        <!--Tag Plot Table View Controller-->
+        <scene sceneID="Dhh-oU-imI">
+            <objects>
+                <tableViewController storyboardIdentifier="TaggedTableVC" id="45r-96-b01" customClass="TagPlotTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yDZ-kH-TbD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" textLabel="nbJ-0p-zZe" style="IBUITableViewCellStyleDefault" id="F46-bz-lA1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F46-bz-lA1" id="ZsV-Yr-LdF">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nbJ-0p-zZe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="45r-96-b01" id="QIS-ah-pl1"/>
+                            <outlet property="delegate" destination="45r-96-b01" id="e7P-Uy-bdS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="flg-c4-gYc">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="mxt-K2-Z56">
+                            <connections>
+                                <action selector="ReturnBack:" destination="45r-96-b01" id="BH5-5I-3xY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wjs-Xi-mi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="-162"/>
+        </scene>
         <!--Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
@@ -84,6 +125,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <!--Tagged Word Plot View Controller-->
+        <scene sceneID="AJO-JO-Jgf">
+            <objects>
+                <navigationController storyboardIdentifier="TaggedWordNC" automaticallyAdjustsScrollViewInsets="NO" id="gLn-eM-Hfv" customClass="TaggedWordPlotViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dGh-xq-dq9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="45r-96-b01" kind="relationship" relationship="rootViewController" id="46a-vA-tf7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XtI-CW-fm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="-162"/>
         </scene>
     </scenes>
     <resources>
