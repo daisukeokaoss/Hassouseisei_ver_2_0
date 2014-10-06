@@ -8,6 +8,9 @@
 
 #import "TagPlotTableViewController.h"
 
+//ユーザーインクルード
+#import "BrainStormingAppDelegate.h"
+
 @interface TagPlotTableViewController ()
 
 @end
@@ -36,26 +39,70 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    if(appDelegete.words_select == WordsA){
+        return appDelegete.tagToiDrive.TagWordsA.count;
+        
+    }else if(appDelegete.words_select == WordsB){
+        return appDelegete.tagToiDrive.TagWordsB.count;
+        
+    }else if(appDelegete.words_select == WordsC){
+        return appDelegete.tagToiDrive.TagWordsC.count;
+        
+    }else if(appDelegete.words_select == WordsD){
+        return appDelegete.tagToiDrive.TagWordsD.count;
+        
+    }else if(appDelegete.words_select == WordsE){
+        return appDelegete.tagToiDrive.TagWordsE.count;
+        
+    }
+    
+    /*
+    if(appDelegete.words_select == WordsA){
+        
+    }else if(appDelegete.words_select == WordsB){
+        
+    }else if(appDelegete.words_select == WordsC){
+        
+    }else if(appDelegete.words_select == WordsD){
+        
+    }else if(appDelegete.words_select == WordsE){
+        
+    }*/
     return 0;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier:@"WordCell" forIndexPath:indexPath];
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    if(appDelegete.words_select == WordsA){
+        cell.textLabel.text = appDelegete.tagToiDrive.TagWordsA[indexPath.row];
+      
+        
+    }else if(appDelegete.words_select == WordsB){
+        cell.textLabel.text = appDelegete.tagToiDrive.TagWordsB[indexPath.row];
+        
+    }else if(appDelegete.words_select == WordsC){
+        cell.textLabel.text = appDelegete.tagToiDrive.TagWordsC[indexPath.row];
+        
+    }else if(appDelegete.words_select == WordsD){
+        cell.textLabel.text = appDelegete.tagToiDrive.TagWordsD[indexPath.row];
+        
+    }else if(appDelegete.words_select == WordsE){
+        cell.textLabel.text = appDelegete.tagToiDrive.TagWordsE[indexPath.row];
+        
+    }
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

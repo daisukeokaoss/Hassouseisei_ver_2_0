@@ -13,6 +13,15 @@
 #import "GlobalSetting.h"
 #import "StoreTagWordToiDrive.h"
 
+
+typedef enum{
+    WordsA,
+    WordsB,
+    WordsC,
+    WordsD,
+    WordsE
+}SelectedWords;
+
 @interface BrainStormingAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -21,5 +30,7 @@
 @property (strong,nonatomic) GlobalSetting *globalSetting;
 
 @property (strong,nonatomic) StoreTagWordToiDrive *tagToiDrive;
+
+@property (nonatomic) SelectedWords words_select;
 
 @end

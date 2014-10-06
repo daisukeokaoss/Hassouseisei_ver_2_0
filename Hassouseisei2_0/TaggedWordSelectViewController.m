@@ -10,6 +10,7 @@
 
 //ユーザーインポート
 #import "TagPlotTableViewController.h"
+#import "BrainStormingAppDelegate.h"
 
 
 //以下、色定義
@@ -99,9 +100,10 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     
-    //そのStoryboardにある遷移先のViewConrollerを用意して
+    
     TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
-    //呼び出し！
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.words_select = WordsA;
     [self presentViewController:vc animated:YES completion:nil];
     
 }
@@ -109,19 +111,23 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     
-    //そのStoryboardにある遷移先のViewConrollerを用意して
+    
     TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
-    //呼び出し！
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.words_select = WordsB;
+    
     [self presentViewController:vc animated:YES completion:nil];
+    
     
 }
 -(void)ShowTagWordC
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     
-    //そのStoryboardにある遷移先のViewConrollerを用意して
+    
     TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
-    //呼び出し！
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.words_select = WordsC;
     [self presentViewController:vc animated:YES completion:nil];
     
 }
@@ -129,9 +135,10 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     
-    //そのStoryboardにある遷移先のViewConrollerを用意して
+    
     TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
-    //呼び出し！
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.words_select = WordsD;
     [self presentViewController:vc animated:YES completion:nil];
     
 }
@@ -139,9 +146,10 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     
-    //そのStoryboardにある遷移先のViewConrollerを用意して
+    
     TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"TaggedWordNC"];
-    //呼び出し！
+    BrainStormingAppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.words_select = WordsE;
     [self presentViewController:vc animated:YES completion:nil];
     
 }

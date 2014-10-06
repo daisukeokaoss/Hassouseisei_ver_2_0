@@ -9,15 +9,24 @@
 #import "StoreTagWordToiDrive.h"
 
 @interface StoreTagWordToiDrive()
-@property (nonatomic,strong) NSMutableArray *TagWordsA;
-@property (nonatomic,strong) NSMutableArray *TagWordsB;
-@property (nonatomic,strong) NSMutableArray *TagWordsC;
-@property (nonatomic,strong) NSMutableArray *TagWordsD;
-@property (nonatomic,strong) NSMutableArray *TagWordsE;
+
 
 @end
 
 @implementation StoreTagWordToiDrive
+
+-(id)init
+{
+    self =[super init];
+    if(self){
+        self.TagWordsA = [[NSMutableArray alloc] init];
+        self.TagWordsB = [[NSMutableArray alloc] init];
+        self.TagWordsC = [[NSMutableArray alloc] init];
+        self.TagWordsD = [[NSMutableArray alloc] init];
+        self.TagWordsE = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 -(void)StoreAllArrayToiDrive
 {

@@ -16,6 +16,12 @@
 -(void)SaveToTagD:(NSString *)string;
 -(void)SaveToTagE:(NSString *)string;
 
+@property (nonatomic,strong) NSMutableArray *TagWordsA;
+@property (nonatomic,strong) NSMutableArray *TagWordsB;
+@property (nonatomic,strong) NSMutableArray *TagWordsC;
+@property (nonatomic,strong) NSMutableArray *TagWordsD;
+@property (nonatomic,strong) NSMutableArray *TagWordsE;
+
 
 
 

@@ -18,6 +18,8 @@
     
     [self.globalSetting dataStructureFromUserDefault];
     
+    self.tagToiDrive = [[StoreTagWordToiDrive alloc] init];
+    
     return YES;
 }
 							
