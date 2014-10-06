@@ -10,6 +10,13 @@
 
 @interface StoreTagWordToiDrive : NSObject
 
+-(void)SaveToTagA:(NSString *)string;
+-(void)SaveToTagB:(NSString *)string;
+-(void)SaveToTagC:(NSString *)string;
+-(void)SaveToTagD:(NSString *)string;
+-(void)SaveToTagE:(NSString *)string;
+
+
 
 
 @end

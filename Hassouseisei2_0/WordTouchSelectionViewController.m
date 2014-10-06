@@ -8,6 +8,7 @@
 
 #import "WordTouchSelectionViewController.h"
 #import "SearchViewController.h"
+#import "BrainStormingAppDelegate.h"
 
 //以下、色定義
 #define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
@@ -119,27 +120,52 @@
 
 -(void)TagToWordsetA
 {
-    
+    BrainStormingAppDelegate *appDelegate = (BrainStormingAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tagToiDrive SaveToTagA:self.TappedWordLabel.text];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"Aに単語を登録しました"
+                              delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)TagToWordsetB
 {
-    
+    BrainStormingAppDelegate *appDelegate = (BrainStormingAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tagToiDrive SaveToTagB:self.TappedWordLabel.text];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"Bに単語を登録しました"
+                              delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)TagToWordsetC
 {
-    
+    BrainStormingAppDelegate *appDelegate = (BrainStormingAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tagToiDrive SaveToTagC:self.TappedWordLabel.text];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"Cに単語を登録しました"
+                              delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)TagToWordsetD
 {
-    
+    BrainStormingAppDelegate *appDelegate = (BrainStormingAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tagToiDrive SaveToTagD:self.TappedWordLabel.text];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"Dに単語を登録しました"
+                              delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)TagToWordSetE
 {
-    
+    BrainStormingAppDelegate *appDelegate = (BrainStormingAppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appDelegate.tagToiDrive SaveToTagE:self.TappedWordLabel.text];
+    UIAlertView *alert =
+    [[UIAlertView alloc] initWithTitle:@"お知らせ" message:@"Eに単語を登録しました"
+                              delegate:self cancelButtonTitle:@"確認" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)ReturnToMain

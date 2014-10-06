@@ -11,6 +11,7 @@
 
 //以下、ユーザーインクルード
 #import "GlobalSetting.h"
+#import "StoreTagWordToiDrive.h"
 
 @interface BrainStormingAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -18,5 +19,7 @@
 
 
 @property (strong,nonatomic) GlobalSetting *globalSetting;
+
+@property (strong,nonatomic) StoreTagWordToiDrive *tagToiDrive;
 
 @end
