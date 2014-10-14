@@ -14,6 +14,7 @@
 #import "WordSetControl.h"
 
 #import "SearchViewController.h"
+#import "WordTouchSelectionViewController.h"
 
 @interface WordPlotScrollView_iPad()
 @property (strong, nonatomic)  UILabel *FirstWordLabel;
@@ -338,10 +339,16 @@
         return;
     }
     
-    SearchViewController* ViewController = [[SearchViewController alloc] init];
+   /* SearchViewController* ViewController = [[SearchViewController alloc] init];
     ViewController.SearchString = sender.text;
     ViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     //アニメーションを有効にしてビューを表示します。
+    [self.mainViewController presentViewController: ViewController animated:YES completion: nil];*/
+
+    WordTouchSelectionViewController *ViewController = [[WordTouchSelectionViewController alloc] init];
+    // ViewController.mainViewController = self.mainViewController;
+    ViewController.TappedWord = sender.text;
+    ViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     [self.mainViewController presentViewController: ViewController animated:YES completion: nil];
     
     
