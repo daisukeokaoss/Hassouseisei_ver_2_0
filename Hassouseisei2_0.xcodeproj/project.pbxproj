@@ -12,6 +12,7 @@
 		7037B46F19E2BDF900364C4E /* TaggedWordSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46E19E2BDF900364C4E /* TaggedWordSelectViewController.m */; };
 		7037B47219E2CC9500364C4E /* TagPlotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */; };
 		7037B47519E2CE3B00364C4E /* TaggedWordPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */; };
+		70528D2A19ED52000087C4A6 /* EthicalWordStoreJP.m in Sources */ = {isa = PBXBuildFile; fileRef = 70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */; };
 		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
 		70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565819D05C4A0037A5DC /* CoreGraphics.framework */; };
 		70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565419D05C250037A5DC /* Foundation.framework */; };
@@ -84,6 +85,8 @@
 		7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPlotTableViewController.m; sourceTree = "<group>"; };
 		7037B47319E2CE3B00364C4E /* TaggedWordPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaggedWordPlotViewController.h; sourceTree = "<group>"; };
 		7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaggedWordPlotViewController.m; sourceTree = "<group>"; };
+		70528D2819ED52000087C4A6 /* EthicalWordStoreJP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthicalWordStoreJP.h; sourceTree = "<group>"; };
+		70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthicalWordStoreJP.m; sourceTree = "<group>"; };
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,6 +202,8 @@
 				C97735F719A3A230002B9B68 /* OpticalWordStore.m */,
 				C97735F919A3A240002B9B68 /* PhysicalWordStore.h */,
 				C97735FA19A3A240002B9B68 /* PhysicalWordStore.m */,
+				70528D2819ED52000087C4A6 /* EthicalWordStoreJP.h */,
+				70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */,
 			);
 			name = Japanese;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			files = (
 				C97735F219A3A206002B9B68 /* ITWordStore.m in Sources */,
 				C97735E919A2771C002B9B68 /* WordSelectionPlotScrollView_iPhone.m in Sources */,
+				70528D2A19ED52000087C4A6 /* EthicalWordStoreJP.m in Sources */,
 				C9CAB42519914B730004B6D6 /* BrainStormingSecondViewController.m in Sources */,
 				C9CAB4501992213A0004B6D6 /* WordPlottScrollView.m in Sources */,
 				C97735FE19A4C711002B9B68 /* WordSelectionPlotScrollView_iPad.m in Sources */,
