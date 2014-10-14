@@ -21,19 +21,19 @@
     if(self){
 
         [self RestoreAlliDriveToArray];
-        if(self.TagWordsA==nil||[self.TagWordsA isKindOfClass:[NSObject class]]){
+        if(!self.TagWordsA){
             self.TagWordsA = [[NSMutableArray alloc] init];
         }
-        if(self.TagWordsB ==nil||[self.TagWordsB isKindOfClass:[NSObject class]]){
+        if(!self.TagWordsB||![self.TagWordsB isKindOfClass:[NSMutableArray class]]){
             self.TagWordsB = [[NSMutableArray alloc] init];
         }
-        if(self.TagWordsC ==Nil||[self.TagWordsC isKindOfClass:[NSObject class]]){
+        if(!self.TagWordsC||![self.TagWordsC isKindOfClass:[NSMutableArray class]]){
             self.TagWordsC =[[NSMutableArray alloc] init];
         }
-        if(self.TagWordsD ==nil||[self.TagWordsD isKindOfClass:[NSObject class]]){
+        if(!self.TagWordsD||![self.TagWordsD isKindOfClass:[NSMutableArray class]]){
             self.TagWordsD =[[NSMutableArray alloc] init];
         }
-        if(self.TagWordsE ==nil||[self.TagWordsE isKindOfClass:[NSObject class]]){
+        if(!self.TagWordsE||![self.TagWordsE isKindOfClass:[NSMutableArray class]]){
             self.TagWordsE =[[NSMutableArray alloc] init];
         }
     }
@@ -43,11 +43,11 @@
 -(void)StoreAllArrayToiDrive
 {
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
-    [ukvs setObject:self.TagWordsA forKey:@"TagWordsA"];
-    [ukvs setObject:self.TagWordsB forKey:@"TagWordsB"];
-    [ukvs setObject:self.TagWordsC forKey:@"TagWordsC"];
-    [ukvs setObject:self.TagWordsD forKey:@"TagWordsD"];
-    [ukvs setObject:self.TagWordsE forKey:@"TagWordsE"];
+    [ukvs setArray:self.TagWordsA forKey:@"TagWordsA_Array"];
+    [ukvs setArray:[self.TagWordsB copy] forKey:@"TagWordsB"];
+    [ukvs setArray:self.TagWordsC forKey:@"TagWordsC"];
+    [ukvs setArray:self.TagWordsD forKey:@"TagWordsD"];
+    [ukvs setArray:self.TagWordsE forKey:@"TagWordsE"];
     [ukvs synchronize];
     
 }
@@ -57,11 +57,11 @@
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
     
 
-    self.TagWordsA = [ukvs objectForKey:@"TagWordsA"];
-    self.TagWordsB = [ukvs objectForKey:@"TagWordsB"];
-    self.TagWordsC = [ukvs objectForKey:@"TagWordsC"];
-    self.TagWordsD = [ukvs objectForKey:@"TagWordsD"];
-    self.TagWordsE = [ukvs objectForKey:@"TagWordsE"];
+    self.TagWordsA = [NSMutableArray arrayWithArray:[ukvs arrayForKey:@"TagWordsA_Array"]];
+    self.TagWordsB = [[ukvs arrayForKey:@"TagWordsB"] mutableCopy];
+    self.TagWordsC = [[ukvs arrayForKey:@"TagWordsC"] mutableCopy];
+    self.TagWordsD = [[ukvs arrayForKey:@"TagWordsD"] mutableCopy];
+    self.TagWordsE = [[ukvs arrayForKey:@"TagWordsE"] mutableCopy];
     
 }
 
