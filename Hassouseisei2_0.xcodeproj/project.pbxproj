@@ -87,6 +87,7 @@
 		7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaggedWordPlotViewController.m; sourceTree = "<group>"; };
 		70528D2819ED52000087C4A6 /* EthicalWordStoreJP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthicalWordStoreJP.h; sourceTree = "<group>"; };
 		70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthicalWordStoreJP.m; sourceTree = "<group>"; };
+		70528D2B19ED56F40087C4A6 /* 発想生成.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "発想生成.entitlements"; sourceTree = "<group>"; };
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -240,6 +241,7 @@
 		C9CAB40E19914B730004B6D6 /* Hassouseisei2_0 */ = {
 			isa = PBXGroup;
 			children = (
+				70528D2B19ED56F40087C4A6 /* 発想生成.entitlements */,
 				C9D8D5BB19B4B0B7007887C8 /* Icon.png */,
 				C9D8D5BD19B4B0D1007887C8 /* Icon@2x-1.png */,
 				C9D8D5BF19B4B0DA007887C8 /* Icon@2x-2.png */,
@@ -377,6 +379,11 @@
 				TargetAttributes = {
 					C9CAB40419914B730004B6D6 = {
 						DevelopmentTeam = X4JADE2386;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					C9CAB42B19914B730004B6D6 = {
 						TestTargetID = C9CAB40419914B730004B6D6;
@@ -607,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "Hassouseisei2_0/発想生成.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -615,7 +623,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "発想生成";
-				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -625,7 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Daisuke Oka (X4JADE2386)";
+				CODE_SIGN_ENTITLEMENTS = "Hassouseisei2_0/発想生成.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hassouseisei2_0/Hassouseisei2_0-Prefix.pch";
@@ -633,7 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "発想生成";
-				PROVISIONING_PROFILE = "ad6d3c9e-770b-4820-998b-a0bbd6daf7cb";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

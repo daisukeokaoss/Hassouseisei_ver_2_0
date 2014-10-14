@@ -21,19 +21,19 @@
     if(self){
 
         [self RestoreAlliDriveToArray];
-        if(self.TagWordsA==nil){
+        if(self.TagWordsA==nil||[self.TagWordsA isKindOfClass:[NSObject class]]){
             self.TagWordsA = [[NSMutableArray alloc] init];
         }
-        if(self.TagWordsB ==nil){
+        if(self.TagWordsB ==nil||[self.TagWordsB isKindOfClass:[NSObject class]]){
             self.TagWordsB = [[NSMutableArray alloc] init];
         }
-        if(self.TagWordsC ==Nil){
+        if(self.TagWordsC ==Nil||[self.TagWordsC isKindOfClass:[NSObject class]]){
             self.TagWordsC =[[NSMutableArray alloc] init];
         }
-        if(self.TagWordsD ==nil){
+        if(self.TagWordsD ==nil||[self.TagWordsD isKindOfClass:[NSObject class]]){
             self.TagWordsD =[[NSMutableArray alloc] init];
         }
-        if(self.TagWordsE ==nil){
+        if(self.TagWordsE ==nil||[self.TagWordsE isKindOfClass:[NSObject class]]){
             self.TagWordsE =[[NSMutableArray alloc] init];
         }
     }
@@ -55,6 +55,8 @@
 -(void)RestoreAlliDriveToArray
 {
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
+    
+
     self.TagWordsA = [ukvs objectForKey:@"TagWordsA"];
     self.TagWordsB = [ukvs objectForKey:@"TagWordsB"];
     self.TagWordsC = [ukvs objectForKey:@"TagWordsC"];
