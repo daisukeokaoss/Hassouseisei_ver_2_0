@@ -47,6 +47,7 @@
     
     [self.myScrollView WordPoolChanged];
     
+    self.myScrollView.mainViewController = self;
 }
 
 -(void)viewDidDisappear:(BOOL)animated

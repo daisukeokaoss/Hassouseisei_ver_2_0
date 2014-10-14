@@ -249,7 +249,7 @@
     [ud setBool:self.WorldHistoryWordSwitch.on forKey:WorldHistoryWordGenerateString];
     [ud setBool:self.MedicalWordSwitch.on forKey:MedicalWordGenerateString];
     
-    int index = [self.wordCountSegmentedControl selectedSegmentIndex];
+    int index = (int)[self.wordCountSegmentedControl selectedSegmentIndex];
     
    // if(index<2||7<index){
      //   index = 2;

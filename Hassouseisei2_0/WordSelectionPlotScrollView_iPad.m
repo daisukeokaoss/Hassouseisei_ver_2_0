@@ -13,8 +13,10 @@
 #import "BrainStormingAppDelegate.h"
 #import "WordSetControl.h"
 #import "CopyrightViewController.h"
+#import "TaggedWordSelectViewController.h"
 //
 
+#define myColorSteelblue [UIColor colorWithRed: (70.0)/255.0 green: (130.0)/255.0 blue: (180.0)/255.0 alpha: 1.0]
 
 @interface WordSelectionPlotScrollView_iPad()
 
@@ -52,6 +54,8 @@
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
 @property (nonatomic,strong) UIButton *CopyRightButton;
+
+@property (nonatomic,strong) UIButton *TagWordShow;
 
 
 @end
@@ -270,6 +274,12 @@
     [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.CopyRightButton sizeToFit];
     
+    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(X_Offset+16,Y_Offset+ 360+39*4, 280, 20)];
+    [self.TagWordShow addTarget:self action:@selector(OpenTaggedWord) forControlEvents:UIControlEventTouchUpInside];
+    [self.TagWordShow setTitle:@"お気に入りに入れられたワード" forState:UIControlStateNormal];
+    [self.TagWordShow setBackgroundColor:myColorSteelblue];
+    [self addSubview:self.TagWordShow];
+    
     
     
     
@@ -305,6 +315,17 @@
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
     [self.MedicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    
+}
+
+-(void)OpenTaggedWord
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    
+    //そのStoryboardにある遷移先のViewConrollerを用意して
+    TaggedWordSelectViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"NewVC2"];
+    //呼び出し！
+    [self.mainViewController presentViewController:vc animated:YES completion:nil];
     
 }
 
