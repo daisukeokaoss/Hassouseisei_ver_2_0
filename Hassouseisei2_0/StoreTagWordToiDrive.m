@@ -43,26 +43,80 @@
 -(void)StoreAllArrayToiDrive
 {
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
-    [ukvs setArray:self.TagWordsA forKey:@"TagWordsA_Array"];
-    [ukvs setArray:[self.TagWordsB copy] forKey:@"TagWordsB"];
-    [ukvs setArray:self.TagWordsC forKey:@"TagWordsC"];
-    [ukvs setArray:self.TagWordsD forKey:@"TagWordsD"];
-    [ukvs setArray:self.TagWordsE forKey:@"TagWordsE"];
-    [ukvs synchronize];
+
+
+    [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsA count]] forKey:@"TagWordA_Count"];
+    for(int i=0;i<self.TagWordsA.count;i++){
+        [ukvs setString:(NSString *)self.TagWordsA[i] forKey:[NSString stringWithFormat:@"TagWordA_%d",i]];
+    }
+    
+    [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsB count]] forKey:@"TagWordB_Count"];
+    for(int i=0;i<self.TagWordsB.count;i++){
+        [ukvs setString:(NSString *)self.TagWordsB[i] forKey:[NSString stringWithFormat:@"TagWordB_%d",i]];
+    }
+    
+    [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsC count]] forKey:@"TagWordC_Count"];
+    for(int i=0;i<self.TagWordsC.count;i++){
+        [ukvs setString:(NSString *)self.TagWordsC[i] forKey:[NSString stringWithFormat:@"TagWordC_%d",i]];
+    }
+    
+    [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsD count]] forKey:@"TagWordD_Count"];
+    for(int i=0;i<self.TagWordsD.count;i++){
+        [ukvs setString:(NSString *)self.TagWordsD[i] forKey:[NSString stringWithFormat:@"TagWordD_%d",i]];
+    }
+    
+    [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsE count]] forKey:@"TagWordE_Count"];
+    for(int i=0;i<self.TagWordsE.count;i++){
+        [ukvs setString:(NSString *)self.TagWordsE[i] forKey:[NSString stringWithFormat:@"TagWordE_%d",i]];
+    }
+    bool result =[ukvs synchronize];
     
 }
 
 -(void)RestoreAlliDriveToArray
 {
+    
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
     
+    int TagWordA_Count =(int)[ukvs objectForKey:@"TagWordA_Count"];
+    for(int i=0;i<TagWordA_Count;i++){
+        if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordA_%d",i]] == nil){
+            break;
+        }
+        [self.TagWordsA addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordA_%d",i]]];
+    }
 
-    self.TagWordsA = [NSMutableArray arrayWithArray:[ukvs arrayForKey:@"TagWordsA_Array"]];
-    self.TagWordsB = [[ukvs arrayForKey:@"TagWordsB"] mutableCopy];
-    self.TagWordsC = [[ukvs arrayForKey:@"TagWordsC"] mutableCopy];
-    self.TagWordsD = [[ukvs arrayForKey:@"TagWordsD"] mutableCopy];
-    self.TagWordsE = [[ukvs arrayForKey:@"TagWordsE"] mutableCopy];
+    int TagWordB_Count =(int)[ukvs objectForKey:@"TagWordB_Count"];
+    for(int i=0;i<TagWordB_Count;i++){
+        if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordB_%d",i]] == nil){
+            break;
+        }
+        [self.TagWordsB addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordB_%d",i]]];
+    }
     
+    int TagWordC_Count =(int)[ukvs objectForKey:@"TagWordC_Count"];
+    for(int i=0;i<TagWordC_Count;i++){
+        if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordC_%d",i]] == nil){
+            break;
+        }
+        [self.TagWordsC addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordC_%d",i]]];
+    }
+    
+    int TagWordD_Count =(int)[ukvs objectForKey:@"TagWordD_Count"];
+    for(int i=0;i<TagWordD_Count;i++){
+        if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordD_%d",i]] == nil){
+            break;
+        }
+        [self.TagWordsD addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordD_%d",i]]];
+    }
+    
+    int TagWordE_Count =(int)[ukvs objectForKey:@"TagWordE_Count"];
+    for(int i=0;i<TagWordE_Count;i++){
+        if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordE_%d",i]] == nil){
+            break;
+        }
+        [self.TagWordsE addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordE_%d",i]]];
+    }
 }
 
 -(void)SaveToTagA:(NSString *)string

@@ -18,6 +18,15 @@
     
     [self.globalSetting dataStructureFromUserDefault];
     
+
+    
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateKVStoreItems:)
+                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
+                                               object:store];
+    [store synchronize];
+    
     self.tagToiDrive = [[StoreTagWordToiDrive alloc] init];
     
     return YES;
@@ -49,5 +58,35 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)updateKVStoreItems:(NSNotification*)notification {
+    // Get the list of keys that changed.
+    NSDictionary* userInfo = [notification userInfo];
+    NSNumber* reasonForChange = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
+    NSInteger reason = -1;
+    
+    // If a reason could not be determined, do not update anything.
+    if (!reasonForChange)
+        return;
+    
+    // Update only for changes from the server.
+    reason = [reasonForChange integerValue];
+    if ((reason == NSUbiquitousKeyValueStoreServerChange) ||
+        (reason == NSUbiquitousKeyValueStoreInitialSyncChange)) {
+        // If something is changing externally, get the changes
+        // and update the corresponding keys locally.
+        NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+        NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+        NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        // This loop assumes you are using the same key names in both
+        // the user defaults database and the iCloud key-value store
+        for (NSString* key in changedKeys) {
+            id value = [store objectForKey:key];
+            [userDefaults setObject:value forKey:key];
+        }
+    }
+}
+
 
 @end

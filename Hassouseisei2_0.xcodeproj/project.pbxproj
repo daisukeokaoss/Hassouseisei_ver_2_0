@@ -168,8 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B1565F19D05D850037A5DC /* UIKit.framework in Frameworks */,
 				70528D2D19ED75BB0087C4A6 /* CloudKit.framework in Frameworks */,
+				70B1565F19D05D850037A5DC /* UIKit.framework in Frameworks */,
 				70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */,
 				70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */,
 			);
