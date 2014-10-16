@@ -67,7 +67,7 @@
 
 -(void)SaveToTagA:(NSString *)string
 {
-    [self.TagWordsA addObject:string];
+    [self.TagWordsA addObject:[string copy]];
     [self StoreAllArrayToiDrive];
 }
 -(void)SaveToTagB:(NSString *)string
