@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7024ED5A19F0B9170070E8BA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7024ED5919F0B9170070E8BA /* CloudKit.framework */; };
 		7037B46919DCED7500364C4E /* WordTouchSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */; };
 		7037B46C19DD228200364C4E /* StoreTagWordToiDrive.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46B19DD228200364C4E /* StoreTagWordToiDrive.m */; };
 		7037B46F19E2BDF900364C4E /* TaggedWordSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B46E19E2BDF900364C4E /* TaggedWordSelectViewController.m */; };
 		7037B47219E2CC9500364C4E /* TagPlotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47119E2CC9500364C4E /* TagPlotTableViewController.m */; };
 		7037B47519E2CE3B00364C4E /* TaggedWordPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7037B47419E2CE3B00364C4E /* TaggedWordPlotViewController.m */; };
 		70528D2A19ED52000087C4A6 /* EthicalWordStoreJP.m in Sources */ = {isa = PBXBuildFile; fileRef = 70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */; };
-		70528D2D19ED75BB0087C4A6 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70528D2C19ED75BB0087C4A6 /* CloudKit.framework */; };
 		70B1564F19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */; };
 		70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565819D05C4A0037A5DC /* CoreGraphics.framework */; };
 		70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B1565419D05C250037A5DC /* Foundation.framework */; };
@@ -76,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7024ED5919F0B9170070E8BA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7037B46719DCED7500364C4E /* WordTouchSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTouchSelectionViewController.h; sourceTree = "<group>"; };
 		7037B46819DCED7500364C4E /* WordTouchSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTouchSelectionViewController.m; sourceTree = "<group>"; };
 		7037B46A19DD228200364C4E /* StoreTagWordToiDrive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTagWordToiDrive.h; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		70528D2819ED52000087C4A6 /* EthicalWordStoreJP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EthicalWordStoreJP.h; sourceTree = "<group>"; };
 		70528D2919ED52000087C4A6 /* EthicalWordStoreJP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EthicalWordStoreJP.m; sourceTree = "<group>"; };
 		70528D2B19ED56F40087C4A6 /* 発想生成.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "発想生成.entitlements"; sourceTree = "<group>"; };
-		70528D2C19ED75BB0087C4A6 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		70B1564D19D04CD80037A5DC /* MedicalWordJp_MachineCollect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicalWordJp_MachineCollect.h; sourceTree = "<group>"; };
 		70B1564E19D04CD80037A5DC /* MedicalWordJp_MachineCollect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicalWordJp_MachineCollect.m; sourceTree = "<group>"; };
 		70B1565419D05C250037A5DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,8 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70528D2D19ED75BB0087C4A6 /* CloudKit.framework in Frameworks */,
 				70B1565F19D05D850037A5DC /* UIKit.framework in Frameworks */,
+				7024ED5A19F0B9170070E8BA /* CloudKit.framework in Frameworks */,
 				70B1565E19D05D790037A5DC /* Foundation.framework in Frameworks */,
 				70B1565D19D05D720037A5DC /* CoreGraphics.framework in Frameworks */,
 			);
@@ -234,7 +234,7 @@
 		C9CAB40719914B730004B6D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70528D2C19ED75BB0087C4A6 /* CloudKit.framework */,
+				7024ED5919F0B9170070E8BA /* CloudKit.framework */,
 				70B1565819D05C4A0037A5DC /* CoreGraphics.framework */,
 				70B1565619D05C2E0037A5DC /* UIKit.framework */,
 				70B1565419D05C250037A5DC /* Foundation.framework */,

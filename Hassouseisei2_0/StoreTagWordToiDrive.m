@@ -78,11 +78,18 @@
     
     NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
     
+    self.TagWordsA = [[NSMutableArray alloc] init];
+    self.TagWordsB = [[NSMutableArray alloc] init];
+    self.TagWordsC = [[NSMutableArray alloc] init];
+    self.TagWordsD = [[NSMutableArray alloc] init];
+    self.TagWordsE = [[NSMutableArray alloc] init];
+    
     int TagWordA_Count =(int)[ukvs objectForKey:@"TagWordA_Count"];
     for(int i=0;i<TagWordA_Count;i++){
         if([ukvs stringForKey:[NSString stringWithFormat:@"TagWordA_%d",i]] == nil){
             break;
         }
+        
         [self.TagWordsA addObject:[ukvs stringForKey:[NSString stringWithFormat:@"TagWordA_%d",i]]];
     }
 
