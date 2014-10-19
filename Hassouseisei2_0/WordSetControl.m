@@ -18,6 +18,7 @@
 #import "PhysicalWordStore.h"
 #import "WorldHistoryWordStore.h"
 #import "MedicalWordJp_MachineCollect.h"
+#import "EthicalWordStoreJP.h"
 #import "BrainStormingAppDelegate.h"
 
 
@@ -63,6 +64,9 @@
     if(setting.MedicalWordGenerate){
         [wordPool addObjectsFromArray:[MedicalWordJp_MachineCollect GenerateWordArray]];
     }
+    if(setting.EthicalWordGenerate){
+        [wordPool addObjectsFromArray:[EthicalWordStoreJP GenerateWordArray]];
+    }
     
     return (int)[wordPool count];
 }
@@ -100,6 +104,9 @@
     }
     if(setting.MedicalWordGenerate){
         [self.WordPool_Global addObjectsFromArray:[MedicalWordJp_MachineCollect GenerateWordArray]];
+    }
+    if(setting.EthicalWordGenerate){
+        [self.WordPool_Global addObjectsFromArray:[EthicalWordStoreJP GenerateWordArray]];
     }
 }
 

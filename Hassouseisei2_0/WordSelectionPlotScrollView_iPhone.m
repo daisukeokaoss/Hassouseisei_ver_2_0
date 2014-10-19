@@ -51,6 +51,9 @@
 @property (nonatomic,strong) UISwitch *MedicalWordSwitch;
 @property (nonatomic,strong) UILabel  *MedicalWordLabel;
 
+@property (nonatomic,strong) UISwitch *EthicalWordSwitch;
+@property (nonatomic,strong) UILabel  *EthicalWordLabel;
+
 @property (nonatomic,strong) UILabel *WordCountLabel;
 
 @property (nonatomic,strong) UIButton *CopyRightButton;
@@ -132,24 +135,30 @@
     [self.MedicalWordLabel setText:@"医学用語"];
     [self.MedicalWordLabel sizeToFit];
     
+    self.EthicalWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(36,378+39,68,21)];
+    self.EthicalWordSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(237,378+39,51,31)];
+    [self.EthicalWordLabel setText:@"倫理用語"];
     
-    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 378+39, 68, 21)];
+    
+    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 378+39*2, 68, 21)];
     
     [self.WordCountLabel setText:@"ワード数は0個です"];
     [self.WordCountLabel sizeToFit];
 
     //self.CopyRightButton = [[UIButton alloc]//initWithFrame:CGRectMake(36, 379, 100, 100)];
     self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [self.CopyRightButton setFrame:CGRectMake(36, 360+39*2, 50, 50)];
+    [self.CopyRightButton setFrame:CGRectMake(36, 360+39*3, 50, 50)];
     
     [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.CopyRightButton sizeToFit];
     
-    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(16, 360+39*3, 280, 20)];
+    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(16, 360+39*4, 280, 20)];
     [self.TagWordShow addTarget:self action:@selector(OpenTaggedWord) forControlEvents:UIControlEventTouchUpInside];
     [self.TagWordShow setTitle:@"お気に入りに入れられたワード" forState:UIControlStateNormal];
     [self.TagWordShow setBackgroundColor:myColorSteelblue];
     [self addSubview:self.TagWordShow];
+    
+    [self setContentSize:CGSizeMake(self.bounds.size.width, 360+38*4+30)];
     
     
     
@@ -174,6 +183,8 @@
     [self addSubview:self.WorldHistoryWordSwitch];
     [self addSubview:self.MedicalWordLabel];
     [self addSubview:self.MedicalWordSwitch];
+    [self addSubview:self.EthicalWordLabel];
+    [self addSubview:self.EthicalWordSwitch];
     
     [self addSubview:self.WordCountLabel];
     [self addSubview:self.CopyRightButton];
@@ -187,6 +198,7 @@
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
     [self.MedicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.EthicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
 }
      
@@ -220,6 +232,7 @@
     setting.ElementaryWordGenerate = self.ElementaryWordSwitch.on;
     setting.WorldHistoryWordGenerate = self.WorldHistoryWordSwitch.on;
     setting.MedicalWordGenerate = self.MedicalWordSwitch.on;
+    setting.EthicalWordGenerate = self.EthicalWordSwitch.on;
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     
@@ -248,6 +261,7 @@
     [ud setBool:self.ElementaryWordSwitch.on forKey:ElementaryWordGenerateString];
     [ud setBool:self.WorldHistoryWordSwitch.on forKey:WorldHistoryWordGenerateString];
     [ud setBool:self.MedicalWordSwitch.on forKey:MedicalWordGenerateString];
+    [ud setBool:self.EthicalWordSwitch.on forKey:EthicalWordGenerateString];
     
     int index = (int)[self.wordCountSegmentedControl selectedSegmentIndex];
     
@@ -282,6 +296,7 @@
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
     [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
     [defaults setObject:@(YES) forKey:MedicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:EthicalWordGenerateString];
      
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
@@ -296,6 +311,7 @@
      [self.ElementaryWordSwitch  setOn:[ud boolForKey:ElementaryWordGenerateString] animated:YES];
     [self.WorldHistoryWordSwitch setOn:[ud boolForKey:WorldHistoryWordGenerateString] animated:YES];
     [self.MedicalWordSwitch setOn:[ud boolForKey:MedicalWordGenerateString] animated:YES];
+    [self.EthicalWordSwitch setOn:[ud boolForKey:EthicalWordGenerateString] animated:YES];
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     

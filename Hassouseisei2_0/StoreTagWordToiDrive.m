@@ -69,7 +69,7 @@
     for(int i=0;i<self.TagWordsE.count;i++){
         [ukvs setString:(NSString *)self.TagWordsE[i] forKey:[NSString stringWithFormat:@"TagWordE_%d",i]];
     }
-    bool result =[ukvs synchronize];
+    [ukvs synchronize];
     
 }
 

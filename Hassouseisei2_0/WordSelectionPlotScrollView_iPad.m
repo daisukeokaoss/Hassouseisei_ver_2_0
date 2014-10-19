@@ -50,6 +50,9 @@
 @property (nonatomic,strong) UISwitch *MedicalWordSwitch;
 @property (nonatomic,strong) UILabel  *MedicalWordLabel;
 
+@property (nonatomic,strong) UISwitch *EthicalWordSwitch;
+@property (nonatomic,strong) UILabel  *EthicalWordLabel;
+
 
 @property (nonatomic,strong) UILabel *WordCountLabel;
 

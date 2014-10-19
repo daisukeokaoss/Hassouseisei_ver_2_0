@@ -18,6 +18,7 @@ NSString * const  PhysicalWordGenerateString =@"PhysicalWordGenerateString";
 NSString * const  ElementaryWordGenerateString = @"ElementaryWordGenerateString";
 NSString * const  WorldHistoryWordGenerateString = @"WorldHistoryWordGenerateString";
 NSString * const  MedicalWordGenerateString = @"MedicalWordGenerateString";
+NSString * const  EthicalWordGenerateString = @"EthicalWordGenerateString";
 
 NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
 
@@ -39,6 +40,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
     [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
     [defaults setObject:@(YES) forKey:MedicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:EthicalWordGenerateString];
     
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
 
@@ -56,6 +58,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     self.ElementaryWordGenerate   = [ud boolForKey:ElementaryWordGenerateString];
     self.WorldHistoryWordGenerate = [ud boolForKey:WorldHistoryWordGenerateString];
     self.MedicalWordGenerate      = [ud boolForKey:MedicalWordGenerateString];
+    self.EthicalWordGenerate      = [ud boolForKey:EthicalWordGenerateString];
     
     self.NumberOfGenerateWord     = (int)[ud integerForKey:NumberOfGenerateWordString];
     
@@ -74,6 +77,7 @@ NSString * const  NumberOfGenerateWordString = @"NumberOfGenerateWordString";
     [ud setBool:self.ElementaryWordGenerate forKey:ElementaryWordGenerateString];
     [ud setBool:self.WorldHistoryWordGenerate forKey:WorldHistoryWordGenerateString];
     [ud setBool:self.MedicalWordGenerate forKey:MedicalWordGenerateString];
+    [ud setBool:self.EthicalWordGenerate forKey:EthicalWordGenerateString];
     
     [ud setInteger:self.NumberOfGenerateWord forKey:NumberOfGenerateWordString];
     
