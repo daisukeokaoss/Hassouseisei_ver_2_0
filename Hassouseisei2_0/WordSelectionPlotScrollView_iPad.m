@@ -106,6 +106,7 @@
     setting.ElementaryWordGenerate = self.ElementaryWordSwitch.on;
     setting.WorldHistoryWordGenerate = self.WorldHistoryWordSwitch.on;
     setting.MedicalWordGenerate = self.MedicalWordSwitch.on;
+    setting.EthicalWordGenerate = self.EthicalWordSwitch.on;
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     
@@ -134,6 +135,7 @@
     [ud setBool:self.ElementaryWordSwitch.on forKey:ElementaryWordGenerateString];
     [ud setBool:self.WorldHistoryWordSwitch.on forKey:WorldHistoryWordGenerateString];
     [ud setBool:self.MedicalWordSwitch.on forKey:MedicalWordGenerateString];
+    [ud setBool:self.EthicalWordSwitch.on forKey:EthicalWordGenerateString];
     
     int index = (int)[self.wordCountSegmentedControl selectedSegmentIndex];
     
@@ -162,6 +164,7 @@
     [defaults setObject:@(YES) forKey:ElementaryWordGenerateString];
     [defaults setObject:@(YES) forKey:WorldHistoryWordGenerateString];
     [defaults setObject:@(YES) forKey:MedicalWordGenerateString];
+    [defaults setObject:@(YES) forKey:EthicalWordGenerateString];
     
     [defaults setObject:@(7) forKey:NumberOfGenerateWordString];
     [ud registerDefaults:defaults];
@@ -175,6 +178,7 @@
     [self.ElementaryWordSwitch  setOn:[ud boolForKey:ElementaryWordGenerateString] animated:YES];
     [self.WorldHistoryWordSwitch setOn:[ud boolForKey:WorldHistoryWordGenerateString] animated:YES];
     [self.MedicalWordSwitch setOn:[ud boolForKey:MedicalWordGenerateString] animated:YES];
+    [self.EthicalWordSwitch setOn:[ud boolForKey:EthicalWordGenerateString] animated:YES];
     
     NSArray *items = @[@"2",@"3",@"4",@"5",@"6",@"7"];
     
@@ -264,20 +268,27 @@
     [self.MedicalWordLabel setText:@"医学用語"];
     [self.MedicalWordLabel sizeToFit];
     
+    self.EthicalWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset +36,Y_Offset +378+39,68,21)];
+    self.EthicalWordSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(X_Offset +237,Y_Offset +378+39,51,31)];
+    [self.EthicalWordLabel setText:@"倫理用語"];
+    [self.EthicalWordSwitch sizeToFit];
     
     
-    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36, Y_Offset + 417, 68, 21)];
+    
+    
+    
+    self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(X_Offset+36, Y_Offset + 417+39, 68, 21)];
     
     [self.WordCountLabel setText:@"ワード数は0個です"];
     [self.WordCountLabel sizeToFit];
     
     self.CopyRightButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [self.CopyRightButton setFrame:CGRectMake(X_Offset+36, Y_Offset + 456, 50, 50)];
+    [self.CopyRightButton setFrame:CGRectMake(X_Offset+36, Y_Offset + 456+39, 50, 50)];
     
     [self.CopyRightButton addTarget:self action:@selector(InfoButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [self.CopyRightButton sizeToFit];
     
-    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(X_Offset+16,Y_Offset+ 360+39*4, 280, 20)];
+    self.TagWordShow = [[UIButton alloc] initWithFrame:CGRectMake(X_Offset+16,Y_Offset+ 360+39*5, 280, 20)];
     [self.TagWordShow addTarget:self action:@selector(OpenTaggedWord) forControlEvents:UIControlEventTouchUpInside];
     [self.TagWordShow setTitle:@"お気に入りに入れられたワード" forState:UIControlStateNormal];
     [self.TagWordShow setBackgroundColor:myColorSteelblue];
@@ -306,6 +317,8 @@
     [self addSubview:self.WorldHistoryWordSwitch];
     [self addSubview:self.MedicalWordLabel];
     [self addSubview:self.MedicalWordSwitch];
+    [self addSubview:self.EthicalWordLabel];
+    [self addSubview:self.EthicalWordSwitch];
     [self addSubview:self.WordCountLabel];
     [self addSubview:self.CopyRightButton];
     
@@ -318,6 +331,7 @@
     [self.physicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     [self.WorldHistoryWordSwitch addTarget:self action:@selector(WordPoolChanged)  forControlEvents:UIControlEventValueChanged];
     [self.MedicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
+    [self.EthicalWordSwitch addTarget:self action:@selector(WordPoolChanged) forControlEvents:UIControlEventValueChanged];
     
 }
 

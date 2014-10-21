@@ -138,6 +138,7 @@
     self.EthicalWordLabel = [[UILabel alloc] initWithFrame:CGRectMake(36,378+39,68,21)];
     self.EthicalWordSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(237,378+39,51,31)];
     [self.EthicalWordLabel setText:@"倫理用語"];
+    [self.EthicalWordSwitch sizeToFit];
     
     
     self.WordCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(36, 378+39*2, 68, 21)];
