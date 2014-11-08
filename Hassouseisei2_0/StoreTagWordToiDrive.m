@@ -42,32 +42,33 @@
 
 -(void)StoreAllArrayToiDrive
 {
-    NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
+    //NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
+    NSUserDefaults *ukvs = [NSUserDefaults standardUserDefaults];
 
 
     [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsA count]] forKey:@"TagWordA_Count"];
     for(int i=0;i<self.TagWordsA.count;i++){
-        [ukvs setString:(NSString *)self.TagWordsA[i] forKey:[NSString stringWithFormat:@"TagWordA_%d",i]];
+        [ukvs setObject:(NSString *)self.TagWordsA[i] forKey:[NSString stringWithFormat:@"TagWordA_%d",i]];
     }
     
     [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsB count]] forKey:@"TagWordB_Count"];
     for(int i=0;i<self.TagWordsB.count;i++){
-        [ukvs setString:(NSString *)self.TagWordsB[i] forKey:[NSString stringWithFormat:@"TagWordB_%d",i]];
+        [ukvs setObject:(NSString *)self.TagWordsB[i] forKey:[NSString stringWithFormat:@"TagWordB_%d",i]];
     }
     
     [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsC count]] forKey:@"TagWordC_Count"];
     for(int i=0;i<self.TagWordsC.count;i++){
-        [ukvs setString:(NSString *)self.TagWordsC[i] forKey:[NSString stringWithFormat:@"TagWordC_%d",i]];
+        [ukvs setObject:(NSString *)self.TagWordsC[i] forKey:[NSString stringWithFormat:@"TagWordC_%d",i]];
     }
     
     [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsD count]] forKey:@"TagWordD_Count"];
     for(int i=0;i<self.TagWordsD.count;i++){
-        [ukvs setString:(NSString *)self.TagWordsD[i] forKey:[NSString stringWithFormat:@"TagWordD_%d",i]];
+        [ukvs setObject:(NSString *)self.TagWordsD[i] forKey:[NSString stringWithFormat:@"TagWordD_%d",i]];
     }
     
     [ukvs setObject:[NSNumber numberWithInteger:[self.TagWordsE count]] forKey:@"TagWordE_Count"];
     for(int i=0;i<self.TagWordsE.count;i++){
-        [ukvs setString:(NSString *)self.TagWordsE[i] forKey:[NSString stringWithFormat:@"TagWordE_%d",i]];
+        [ukvs setObject:(NSString *)self.TagWordsE[i] forKey:[NSString stringWithFormat:@"TagWordE_%d",i]];
     }
     [ukvs synchronize];
     
@@ -76,7 +77,8 @@
 -(void)RestoreAlliDriveToArray
 {
     
-    NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
+    //NSUbiquitousKeyValueStore *ukvs = [NSUbiquitousKeyValueStore defaultStore];
+    NSUserDefaults *ukvs = [NSUserDefaults standardUserDefaults];
     
     self.TagWordsA = [[NSMutableArray alloc] init];
     self.TagWordsB = [[NSMutableArray alloc] init];
